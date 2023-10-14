@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Synacor", "Synacor\Synacor.csproj", "{4964F1FD-7807-4EEE-8714-9186A93F4284}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4964F1FD-7807-4EEE-8714-9186A93F4284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4964F1FD-7807-4EEE-8714-9186A93F4284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4964F1FD-7807-4EEE-8714-9186A93F4284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4964F1FD-7807-4EEE-8714-9186A93F4284}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
