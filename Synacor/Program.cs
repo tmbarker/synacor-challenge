@@ -6,4 +6,5 @@ using Synacor.VirtualMachine;
 var vm = new Vm();
 var program = BinaryProvider.Read();
 
-vm.Execute(program);
+vm.Load(program);
+vm.Run();

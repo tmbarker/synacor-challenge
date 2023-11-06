@@ -3,17 +3,16 @@ namespace Synacor.VirtualMachine;
 public partial class Vm
 {
     private const ushort Unset = 0;
-    private const ushort MaxAdr = 32775;
-    private const ushort NumReg = 8;
-    private const ushort MinReg = MaxAdr - NumReg;
-    private const ushort MaxReg = MinReg + NumReg;
+    private const ushort MaxMem = 32767;
+    private const ushort MinReg = 32768;
+    private const ushort MaxReg = 32775;
     private const ushort Modulus = 32768;
+    private const ushort BitMask15 = 32767;
 
     private ushort _ip = Unset;
-    private ushort[] _program = Array.Empty<ushort>();
-    
-    private readonly Dictionary<Opcode, Action> _vectors = new();
+    private readonly Dictionary<Opcode, Operation> _vectors = new();
     private readonly Dictionary<ushort, ushort> _memory = new();
+    private readonly Dictionary<ushort, ushort> _registers = new();
     private readonly Stack<ushort> _stack = new();
     
     public Vm()
@@ -21,39 +20,76 @@ public partial class Vm
         BindVectors();
     }
 
-    public void Execute(ushort[] program)
+    public void Load(ushort[] program)
     {
         _ip = 0;
-        _program = program;
         _memory.Clear();
+        _registers.Clear();
         _stack.Clear();
 
-        while (_ip < program.Length)
+        for (var i = 0; i < program.Length; i++)
         {
-            _vectors[ReadOp()].Invoke();
+            _memory[(ushort)i] = program[i];
         }
+    }
+    
+    public Result Run()
+    {
+        var ec = Result.ok;
+        while (ec.Ok())
+        {
+            ec = _vectors[ReadOp()].Invoke();
+        }
+        
+        return ec;
+    }
+
+    private ushort ReadInstrLiteral()
+    {
+        return ReadMem(adr: _ip++);
     }
     
     private ushort ReadInstr()
     {
-        var literal = _program[_ip++];
-        var register = literal is >= MinReg and <= MaxReg;
+        var literal = ReadInstrLiteral();
+        var isRegister = literal is >= MinReg and <= MaxReg;
 
-        return register
-            ? ReadMem(literal)
+        return isRegister
+            ? ReadVal(literal)
             : literal;
     }
 
     private Opcode ReadOp()
     {
-        return (Opcode)ReadInstr();
+        return (Opcode)ReadInstrLiteral();
     }
     
-    private void WriteMem(ushort adr, ushort value)
+    private ushort ReadVal(ushort adr)
     {
-        _memory[CheckedAdr(adr)] = value;
+        return adr is >= MinReg and <= MaxReg
+            ? ReadReg(adr)
+            : ReadMem(adr);
     }
-
+    
+    private void WriteVal(ushort adr, ushort val)
+    {
+        if (adr is >= MinReg and <= MaxReg)
+        {
+            WriteReg(adr, val);
+        }
+        else
+        {
+            WriteMem(adr, val);
+        }
+    }
+    
+    private ushort ReadReg(ushort adr)
+    {
+        return _registers.TryGetValue(CheckedReg(adr), out var value)
+            ? value
+            : Unset;
+    }
+    
     private ushort ReadMem(ushort adr)
     {
         return _memory.TryGetValue(CheckedAdr(adr), out var value)
@@ -61,10 +97,27 @@ public partial class Vm
             : Unset;
     }
     
+    private void WriteReg(ushort reg, ushort val)
+    {
+        _registers[CheckedReg(reg)] = val;
+    }
+    
+    private void WriteMem(ushort adr, ushort val)
+    {
+        _memory[CheckedAdr(adr)] = val;
+    }
+
+    private static ushort CheckedReg(ushort reg)
+    {
+        return reg is >= MinReg and <= MaxReg
+            ? reg
+            : throw new InvalidRegisterException(reg);
+    }
+    
     private static ushort CheckedAdr(ushort adr)
     {
-        return adr <= MaxAdr
+        return adr <= MaxMem
             ? adr
-            : throw new InvalidAddressException(adr);
+            : throw new InvalidMemoryException(adr);
     }
 }
