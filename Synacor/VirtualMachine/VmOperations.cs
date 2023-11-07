@@ -37,8 +37,8 @@ public partial class Vm
 
     private Result Set()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
 
         WriteVal(adr: a, val: b);
         return Result.ok;
@@ -46,7 +46,7 @@ public partial class Vm
     
     private Result Push()
     {
-        _stack.Push(item: ReadInstr());
+        _stack.Push(item: ReadIpInterpreted());
         return Result.ok;
     }
     
@@ -54,10 +54,10 @@ public partial class Vm
     {
         if (_stack.Count == 0)
         {
-            throw new InvalidOperationException($"Cannot execute {nameof(Opcode.pop)}: Stack is empty");
+            throw new InvalidOperationException(message: $"Cannot execute {nameof(Opcode.pop)}: Stack is empty");
         }
         
-        var a = ReadInstrLiteral();
+        var a = ReadIpLiteral();
         var b = _stack.Pop();
 
         WriteVal(adr: a, val: b);
@@ -66,9 +66,9 @@ public partial class Vm
     
     private Result Eq()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
-        var c = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
+        var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)(b == c ? 1 : 0));
         return Result.ok;
@@ -76,9 +76,9 @@ public partial class Vm
     
     private Result Gt()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
-        var c = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
+        var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)(b > c ? 1 : 0));
         return Result.ok;
@@ -86,14 +86,14 @@ public partial class Vm
     
     private Result Jmp()
     {
-        _ip = ReadInstr();
+        _ip = ReadIpInterpreted();
         return Result.ok;
     }
     
     private Result Jt()
     {
-        var a = ReadInstr();
-        var b = ReadInstr();
+        var a = ReadIpInterpreted();
+        var b = ReadIpInterpreted();
 
         if (a != 0)
         {
@@ -105,8 +105,8 @@ public partial class Vm
     
     private Result Jf()
     {
-        var a = ReadInstr();
-        var b = ReadInstr();
+        var a = ReadIpInterpreted();
+        var b = ReadIpInterpreted();
 
         if (a == 0)
         {
@@ -118,9 +118,9 @@ public partial class Vm
     
     private Result Add()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
-        var c = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
+        var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)((b + c) % Modulus));
         return Result.ok;
@@ -128,9 +128,9 @@ public partial class Vm
     
     private Result Mult()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
-        var c = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
+        var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)((b * c) % Modulus));
         return Result.ok;
@@ -138,9 +138,9 @@ public partial class Vm
     
     private Result Mod()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
-        var c = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
+        var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)((b % c) % Modulus));
         return Result.ok;
@@ -148,9 +148,9 @@ public partial class Vm
     
     private Result And()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
-        var c = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
+        var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)((b & c) % Modulus));
         return Result.ok;
@@ -158,9 +158,9 @@ public partial class Vm
     
     private Result Or()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
-        var c = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
+        var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)((b | c) % Modulus));
         return Result.ok;
@@ -168,8 +168,8 @@ public partial class Vm
     
     private Result Not()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)((~b & BitMask15) % Modulus));
         return Result.ok;
@@ -177,8 +177,8 @@ public partial class Vm
     
     private Result Rmem()
     {
-        var a = ReadInstrLiteral();
-        var b = ReadInstr();
+        var a = ReadIpLiteral();
+        var b = ReadIpInterpreted();
 
         WriteVal(adr: a, val: ReadMem(b));
         return Result.ok;
@@ -186,8 +186,8 @@ public partial class Vm
     
     private Result Wmem()
     {
-        var a = ReadInstr();
-        var b = ReadInstr();
+        var a = ReadIpInterpreted();
+        var b = ReadIpInterpreted();
 
         WriteMem(adr: a, val: b);
         return Result.ok;
@@ -195,7 +195,7 @@ public partial class Vm
     
     private Result Call()
     {
-        var a = ReadInstr();
+        var a = ReadIpInterpreted();
         _stack.Push(_ip);
         _ip = a;
         return Result.ok;
@@ -214,7 +214,7 @@ public partial class Vm
     
     private Result Out()
     {
-        var instr = ReadInstr();
+        var instr = ReadIpInterpreted();
         var @char = Convert.ToChar(instr);
 
         Console.Write(@char);
@@ -223,15 +223,33 @@ public partial class Vm
     
     private Result In()
     {
-        var @in = Console.ReadLine()!;
-        var a = ReadInstrLiteral();
-        
-        WriteVal(adr: a, val: Convert.ToUInt16(@in[0]));
+        EnsureInput();
+
+        var a = ReadIpLiteral();
+        var c = _inputBuffer.Dequeue();
+
+        WriteVal(adr: a, val: c);
         return Result.ok;
     }
 
     private static Result Noop()
     {
         return Result.ok;
+    }
+
+    private void EnsureInput()
+    {
+        if (!_inputBuffer.Any())
+        {
+            ReadInput();
+        }
+    }
+
+    private void ReadInput()
+    {
+        foreach (var c in $"{Console.ReadLine()}\n")
+        {
+            _inputBuffer.Enqueue(c);
+        }
     }
 }

@@ -14,6 +14,7 @@ public partial class Vm
     private readonly Dictionary<ushort, ushort> _memory = new();
     private readonly Dictionary<ushort, ushort> _registers = new();
     private readonly Stack<ushort> _stack = new();
+    private readonly Queue<char> _inputBuffer = new();
     
     public Vm()
     {
@@ -22,10 +23,11 @@ public partial class Vm
 
     public void Load(ushort[] program)
     {
-        _ip = 0;
+        _ip = Unset;
         _memory.Clear();
         _registers.Clear();
         _stack.Clear();
+        _inputBuffer.Clear();
 
         for (var i = 0; i < program.Length; i++)
         {
@@ -36,39 +38,37 @@ public partial class Vm
     public Result Run()
     {
         var ec = Result.ok;
-        while (ec.Ok())
+        while (!ec.Halted())
         {
-            ec = _vectors[ReadOp()].Invoke();
+            ec = _vectors[ReadOpcode()].Invoke();
         }
         
         return ec;
     }
 
-    private ushort ReadInstrLiteral()
+    private ushort ReadIpLiteral()
     {
         return ReadMem(adr: _ip++);
     }
     
-    private ushort ReadInstr()
+    private ushort ReadIpInterpreted()
     {
-        var literal = ReadInstrLiteral();
+        var literal = ReadIpLiteral();
         var isRegister = literal is >= MinReg and <= MaxReg;
 
         return isRegister
-            ? ReadVal(literal)
+            ? ReadReg(adr: literal)
             : literal;
     }
 
-    private Opcode ReadOp()
+    private Opcode ReadOpcode()
     {
-        return (Opcode)ReadInstrLiteral();
-    }
-    
-    private ushort ReadVal(ushort adr)
-    {
-        return adr is >= MinReg and <= MaxReg
-            ? ReadReg(adr)
-            : ReadMem(adr);
+        var literal = ReadIpLiteral();
+        var opcode = (Opcode)literal;
+
+        return Enum.IsDefined(typeof(Opcode), opcode)
+            ? opcode
+            : throw new InvalidOpcodeException(literal);
     }
     
     private void WriteVal(ushort adr, ushort val)

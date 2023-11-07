@@ -4,7 +4,7 @@ public partial class Vm
 {
     public enum Result
     {
-        ok,
+        ok = 0,
         halted
     }
     
@@ -37,8 +37,8 @@ public partial class Vm
 
 public static class ResultExtensions
 {
-    public static bool Ok(this Vm.Result result)
+    public static bool Halted(this Vm.Result result)
     {
-        return result == Vm.Result.ok;
+        return result is Vm.Result.halted;
     }
 }

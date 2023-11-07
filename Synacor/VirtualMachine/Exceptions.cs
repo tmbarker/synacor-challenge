@@ -2,18 +2,21 @@ namespace Synacor.VirtualMachine;
 
 public class InvalidMemoryException : Exception
 {
-    private const string MessageFormat = "Invalid address [{0}]";
-
-    public InvalidMemoryException(ushort adr) : base(message: string.Format(MessageFormat, adr))
+    public InvalidMemoryException(ushort value) : base(message: $"Invalid address [{value}]")
     {
     }
 }
 
 public class InvalidRegisterException : Exception
 {
-    private const string MessageFormat = "Invalid register [{0}]";
+    public InvalidRegisterException(ushort value) : base(message: $"Invalid register [{value}]")
+    {
+    }
+}
 
-    public InvalidRegisterException(ushort reg) : base(message: string.Format(MessageFormat, reg))
+public class InvalidOpcodeException : Exception
+{
+    public InvalidOpcodeException(ushort value) : base(message: $"Invalid opcode [{value}]")
     {
     }
 }
