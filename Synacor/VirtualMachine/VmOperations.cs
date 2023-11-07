@@ -4,30 +4,33 @@ public partial class Vm
 {
     private delegate Result Operation();
     
-    private void BindVectors()
+    private Dictionary<Opcode, Operation> BuildVectorTable()
     {
-        _vectors[Opcode.halt] = Halt;
-        _vectors[Opcode.set]  = Set;
-        _vectors[Opcode.push] = Push;
-        _vectors[Opcode.pop]  = Pop;
-        _vectors[Opcode.eq]   = Eq;
-        _vectors[Opcode.gt]   = Gt;
-        _vectors[Opcode.jmp]  = Jmp;
-        _vectors[Opcode.jt]   = Jt;
-        _vectors[Opcode.jf]   = Jf;
-        _vectors[Opcode.add]  = Add;
-        _vectors[Opcode.mult] = Mult;
-        _vectors[Opcode.mod]  = Mod;
-        _vectors[Opcode.and]  = And;
-        _vectors[Opcode.or]   = Or;
-        _vectors[Opcode.not]  = Not;
-        _vectors[Opcode.rmem] = Rmem;
-        _vectors[Opcode.wmem] = Wmem;
-        _vectors[Opcode.call] = Call;
-        _vectors[Opcode.ret]  = Ret;
-        _vectors[Opcode.@out] = Out;
-        _vectors[Opcode.@in]  = In;
-        _vectors[Opcode.noop] = Noop;
+        return new Dictionary<Opcode, Operation>
+        {
+            [Opcode.halt] = Halt,
+            [Opcode.set]  = Set,
+            [Opcode.push] = Push,
+            [Opcode.pop]  = Pop,
+            [Opcode.eq]   = Eq,
+            [Opcode.gt]   = Gt,
+            [Opcode.jmp]  = Jmp,
+            [Opcode.jt]   = Jt,
+            [Opcode.jf]   = Jf,
+            [Opcode.add]  = Add,
+            [Opcode.mult] = Mult,
+            [Opcode.mod]  = Mod,
+            [Opcode.and]  = And,
+            [Opcode.or]   = Or,
+            [Opcode.not]  = Not,
+            [Opcode.rmem] = Rmem,
+            [Opcode.wmem] = Wmem,
+            [Opcode.call] = Call,
+            [Opcode.ret]  = Ret,
+            [Opcode.@out] = Out,
+            [Opcode.@in]  = In,
+            [Opcode.noop] = Noop
+        };
     }
     
     private static Result Halt()
@@ -46,19 +49,19 @@ public partial class Vm
     
     private Result Push()
     {
-        _stack.Push(item: ReadIpInterpreted());
+        _state.Stack.Push(item: ReadIpInterpreted());
         return Result.ok;
     }
     
     private Result Pop()
     {
-        if (_stack.Count == 0)
+        if (_state.Stack.Count == 0)
         {
             throw new InvalidOperationException(message: $"Cannot execute {nameof(Opcode.pop)}: Stack is empty");
         }
         
         var a = ReadIpLiteral();
-        var b = _stack.Pop();
+        var b = _state.Stack.Pop();
 
         WriteVal(adr: a, val: b);
         return Result.ok;
@@ -86,7 +89,7 @@ public partial class Vm
     
     private Result Jmp()
     {
-        _ip = ReadIpInterpreted();
+        _state.Ip = ReadIpInterpreted();
         return Result.ok;
     }
     
@@ -97,7 +100,7 @@ public partial class Vm
 
         if (a != 0)
         {
-            _ip = b;
+            _state.Ip = b;
         }
         
         return Result.ok;
@@ -110,7 +113,7 @@ public partial class Vm
 
         if (a == 0)
         {
-            _ip = b;
+            _state.Ip = b;
         }
         
         return Result.ok;
@@ -196,19 +199,19 @@ public partial class Vm
     private Result Call()
     {
         var a = ReadIpInterpreted();
-        _stack.Push(_ip);
-        _ip = a;
+        _state.Stack.Push(_state.Ip);
+        _state.Ip = a;
         return Result.ok;
     }
     
     private Result Ret()
     {
-        if (_stack.Count == 0)
+        if (_state.Stack.Count == 0)
         {
             return Halt();
         }
 
-        _ip = _stack.Pop();
+        _state.Ip = _state.Stack.Pop();
         return Result.ok;
     }
     
@@ -226,7 +229,7 @@ public partial class Vm
         EnsureInput();
 
         var a = ReadIpLiteral();
-        var c = _inputBuffer.Dequeue();
+        var c = _state.InputBuffer.Dequeue();
 
         WriteVal(adr: a, val: c);
         return Result.ok;
@@ -239,7 +242,7 @@ public partial class Vm
 
     private void EnsureInput()
     {
-        if (!_inputBuffer.Any())
+        if (!_state.InputBuffer.Any())
         {
             ReadInput();
         }
@@ -249,7 +252,7 @@ public partial class Vm
     {
         foreach (var c in $"{Console.ReadLine()}\n")
         {
-            _inputBuffer.Enqueue(c);
+            _state.InputBuffer.Enqueue(c);
         }
     }
 }

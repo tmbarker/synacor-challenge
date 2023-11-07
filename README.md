@@ -6,13 +6,13 @@ In the past these __*codes*__ were to be entered and verified on the challenge w
 * A copy of a challenge binary can be found [here](https://github.com/tmbarker/synacor-challenge/blob/main/Synacor/Resources/challenge.bin).
 * My __*codes*__, associated with the above binary, can be found [here](https://github.com/tmbarker/synacor-challenge/blob/main/Synacor/codes.txt). An explanation of how I acquired each code follows below.
 
-## Code #1: That was Easy
+## Code #1: That Was Easy
 The first thing I did was open the provided architecture specification, `arch-spec.txt`, in the hints section was the following text:
 ```
 Here's a code for the challenge website: LDOb7UGhTi
 ```
 
-## Code #2: A fledgling VM
+## Code #2: A Fledgling VM
 Another hint in the architecture specification, `arch-spec.txt`, suggested the following:
 ```
 Start with operations 0, 19, and 21.

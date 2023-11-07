@@ -7,18 +7,18 @@ public static class BinaryProvider
     public static ushort[] Read()
     {
         var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, RelativeBinaryPath);
-        var fs = new FileStream(path, mode: FileMode.Open, access: FileAccess.Read);
-        var br = new BinaryReader(fs);
-        var length = fs.Length / 2;
+        var stream = File.OpenRead(path);
+        var reader = new BinaryReader(stream);
+        var length = stream.Length / 2;
         var program = new ushort[length];
 
         for (var i = 0; i < length; i++)
         {
-            program[i] = br.ReadUInt16();
+            program[i] = reader.ReadUInt16();
         }
 
-        fs.Dispose();
-        br.Dispose();
+        stream.Dispose();
+        reader.Dispose();
         
         return program;
     }

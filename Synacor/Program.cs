@@ -3,8 +3,7 @@
 using Synacor.Utilities;
 using Synacor.VirtualMachine;
 
-var vm = new Vm();
 var program = BinaryProvider.Read();
+var vm = Vm.Create(program);
 
-vm.Load(program);
 vm.Run();
