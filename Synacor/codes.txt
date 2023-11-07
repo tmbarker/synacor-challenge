@@ -1,7 +1,7 @@
-1. LDOb7UGhTi - Provided directly in the architecture specification
-2. ImoFztWQCvxj - Outputted by running the challenge binary with the vm
-3. BNCyODLfQkIl - Outputted upon vm self-test completion
-4. pWDWTEfURAdS - Outputted by playing the text based game on the vm
+1. LDOb7UGhTi
+2. ImoFztWQCvxj
+3. BNCyODLfQkIl
+4. pWDWTEfURAdS
 5. ?
 6. ?
 7. ?
