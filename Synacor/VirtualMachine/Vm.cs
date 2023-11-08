@@ -14,13 +14,13 @@ public partial class Vm
     
     public Result Run()
     {
-        var ec = Result.ok;
-        while (!ec.Halted())
+        var status = Result.ok;
+        while (status.Ok())
         {
-            ec = _vectors[ReadOpcode()].Invoke();
+            status = _vectors[ReadOpcode()].Invoke();
         }
         
-        return ec;
+        return status;
     }
     
     private Vm(State state)

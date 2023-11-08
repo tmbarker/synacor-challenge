@@ -220,13 +220,20 @@ public partial class Vm
         var instr = ReadIpInterpreted();
         var @char = Convert.ToChar(instr);
 
-        Console.Write(@char);
+        _state.OutputBuffer.Enqueue(@char);
         return Result.ok;
     }
     
     private Result In()
     {
-        EnsureInput();
+        if (_state.InputBuffer.Count == 0)
+        {
+            //  NOTE: If no buffered input exists, we must decrement
+            //  the IP so that it points at the IN opcode again 
+            //
+            _state.Ip--;
+            return Result.awaitingInput;
+        }
 
         var a = ReadIpLiteral();
         var c = _state.InputBuffer.Dequeue();

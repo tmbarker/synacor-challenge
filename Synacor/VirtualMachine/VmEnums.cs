@@ -5,7 +5,8 @@ public partial class Vm
     public enum Result
     {
         ok = 0,
-        halted
+        halted,
+        awaitingInput
     }
     
     private enum Opcode
@@ -37,8 +38,8 @@ public partial class Vm
 
 public static class ResultExtensions
 {
-    public static bool Halted(this Vm.Result result)
+    public static bool Ok(this Vm.Result result)
     {
-        return result is Vm.Result.halted;
+        return result is Vm.Result.ok;
     }
 }

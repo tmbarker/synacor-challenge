@@ -1,40 +1,12 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Synacor.Cli;
 
-using Synacor.Utilities;
-using Synacor.VirtualMachine;
+namespace Synacor;
 
-var program = BinaryProvider.Read();
-var vm = Vm.Create(program);
-
-vm.BufferCommands(new[]
+internal static class Program
 {
-    "doorway",
-    "north",
-    "north",
-    "bridge",
-    "continue",
-    "down",
-    "east",
-    "take empty lantern",
-    "west",
-    "west",
-    "passage",
-    "ladder",
-    "west",
-    "south",
-    "north",
-    "take can",
-    "use can",
-    "west",
-    "ladder",
-    "darkness",
-    "use lantern",
-    "continue",
-    "west",
-    "west",
-    "west",
-    "west",
-    "north",
-});
-
-vm.Run();
+    public static void Main()
+    {
+        var shell = new Shell();
+        shell.Start();
+    }
+}

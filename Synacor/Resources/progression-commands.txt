@@ -1,0 +1,29 @@
+The following commands will progress the VM through the adjacent challenge binary:
+
+doorway
+north
+north
+bridge
+continue
+down
+east
+take empty lantern
+west
+west
+passage
+ladder
+west
+south
+north
+take can
+use can
+west
+ladder
+darkness
+use lantern
+continue
+west
+west
+west
+west
+north

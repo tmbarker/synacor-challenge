@@ -1,10 +1,13 @@
+using Synacor.Utilities;
+
 namespace Synacor.VirtualMachine;
 
 public partial class Vm
 {
-    public static Vm Create(ushort[] program)
+    public static Vm New()
     {
-        var state = new State(program);
+        var challengeBinary = BinaryProvider.Read();
+        var state = new State(challengeBinary);
         var vm = new Vm(state);
         
         return vm;

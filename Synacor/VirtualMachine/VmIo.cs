@@ -3,6 +3,14 @@ namespace Synacor.VirtualMachine;
 public partial class Vm
 {
     private const char NewLine = '\n';
+
+    public void PrintOutputBuffer()
+    {
+        while (_state.OutputBuffer.Any())
+        {
+            Console.Write(_state.OutputBuffer.Dequeue());
+        }
+    }
     
     public void BufferCommand(string command)
     {
@@ -23,18 +31,5 @@ public partial class Vm
         {
             BufferCommand(command);
         }
-    }
-    
-    private void EnsureInput()
-    {
-        if (!_state.InputBuffer.Any())
-        {
-            ReadCommand();
-        }
-    }
-
-    private void ReadCommand()
-    {
-        BufferCommand(command: $"{Console.ReadLine()}{NewLine}");
     }
 }

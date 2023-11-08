@@ -9,6 +9,7 @@ public partial class Vm
         public ushort[] Registers { get; } = new ushort[NumReg];
         public Stack<ushort> Stack { get; } = new();
         public Queue<char> InputBuffer { get; } = new();
+        public Queue<char> OutputBuffer { get; } = new();
 
         private State()
         {
@@ -52,6 +53,12 @@ public partial class Vm
             {
                 writer.Write(value);
             }
+            
+            writer.Write(OutputBuffer.Count);
+            foreach (var value in OutputBuffer)
+            {
+                writer.Write(value);
+            }
 
             writer.Dispose();
             stream.Dispose();
@@ -84,10 +91,16 @@ public partial class Vm
                 state.Stack.Push(item: reader.ReadUInt16());
             }
 
-            var bufferSize = reader.ReadInt32();
-            for (var i = 0; i <bufferSize; i++)
+            var inBufferSize = reader.ReadInt32();
+            for (var i = 0; i <inBufferSize; i++)
             {
                 state.InputBuffer.Enqueue(item: reader.ReadChar());
+            }
+            
+            var outBufferSize = reader.ReadInt32();
+            for (var i = 0; i <outBufferSize; i++)
+            {
+                state.OutputBuffer.Enqueue(item: reader.ReadChar());
             }
 
             reader.Dispose();
