@@ -1,3 +1,4 @@
+using Synacor.Utilities;
 using Synacor.VirtualMachine;
 
 namespace Synacor.Cli;
@@ -88,13 +89,20 @@ public class Shell
     private void Save(string path)
     {
         _context.Vm.SaveToFile(path);
+        PrintShellLog($"VM state saved to {path}");
     }
 
     private void Load(string path)
     {
         _context.Vm = Vm.LoadFromFile(path);
+        PrintShellLog($"VM state loaded from {path}");
     }
 
+    private static void SolveCoinPuzzle(string _)
+    {
+        PrintShellLog(CoinPuzzle.Solve());
+    }
+    
     private static bool ParseInput(string input, out string cmd, out string arg)
     {
         cmd = string.Empty;
@@ -106,14 +114,14 @@ public class Shell
         }
         
         var index = input.IndexOf(' ');
-        if (index < 0)
+        if (index < 0 || index == input.Length - 1)
         {
             cmd = input;
             return true;
         }
 
         cmd = input[..index];
-        arg = input[index..];
+        arg = input[(index + 1)..];
         return true;
     }
     
@@ -145,6 +153,10 @@ public class Shell
             name: "load",
             desc: "replace the current VM instance with one whose state is deserialized from the specified path",
             handler: Load);
+        yield return new Command(
+            name: "solve-coin",
+            desc: "solve the coin puzzle and print the solution",
+            handler: SolveCoinPuzzle);
     }
 
     private static void PrintShellLog(string? log = null)
