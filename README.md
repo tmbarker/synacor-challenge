@@ -43,7 +43,8 @@ The self-test completion code is: BNCyODLfQkIl
 After the self-test finished executing, I was surprised to find myself playing a text-based RPG. A short interaction was enough to gain my fourth code:
 ```
 == Foothills ==
-You find yourself standing at the base of an enormous mountain.  At its base to the north, there is a massive doorway.  A sign nearby reads "Keep out!  Definitely no treasure within!"
+You find yourself standing at the base of an enormous mountain.  At its base to the north, there is a massive doorway.
+A sign nearby reads "Keep out!  Definitely no treasure within!"
 
 Things of interest here:
 - tablet
@@ -74,3 +75,41 @@ You are in a little maze of twisty passages, all alike.
 I considered writing some path-finding code to explore the maze, but not knowing exactly what I was looking for I proceeded to play manually. As I played, I constructed the below map, which allowed me to find a lantern, oil for the lantern, and a __*code*__ chiseled onto one of the cave walls:
 
 ![synacor_cave_map](https://github.com/tmbarker/synacor-challenge/assets/50631648/5f153d6c-fdf7-4a95-ad0b-bd290dba3894)
+
+## Code #6: Exploration, Arithmetic, and Teleportation
+After emerging from the cave system I encountered a set of ruins:
+```
+== Ruins ==
+You stand in the massive central hall of these ruins.  The walls are crumbling, and vegetation has clearly taken over.
+Rooms are attached in all directions.  There is a strange monument in the center of the hall with circular slots and
+unusual symbols.  It reads:
+_ + _ * _^2 + _^3 - _ = 399
+```
+
+Exploring the adjacent areas yielded 5 coins, each of which, upon inspection, had some sort of numerical marking:
+```
+--look red coin
+This coin is made of a red metal.  It has two dots on one side.
+
+--look corroded coin
+This coin is somewhat corroded.  It has a triangle on one side.
+
+--look shiny coin
+This coin is somehow still quite shiny.  It has a pentagon on one side.
+
+--look concave coin
+This coin is slightly rounded, almost like a tiny bowl.  It has seven dots on one side.
+
+--look blue coin
+This coin is made of a blue metal.  It has nine dots on one side.
+```
+
+After solving which permutation of these coins would satisfy the above equation, I inserted them into the slots in the monument:
+```
+As you place the last coin, you hear a click from the north door.
+```
+In the next area I found a teleporter. Using it transported me directly to Synacor HQ, but not before giving me a glimpse of a __*code*__ in the stars:
+```
+You activate the teleporter!  As you spiral through time and space, you think you see a pattern in the stars...
+    JyDQhSbkpyns
+```
