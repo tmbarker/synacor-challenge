@@ -74,7 +74,7 @@ You are in a little maze of twisty passages, all alike.
 
 I considered writing some path-finding code to explore the maze, but not knowing exactly what I was looking for I proceeded to play manually. As I played, I constructed the below map, which allowed me to find a lantern, oil for the lantern, and a __*code*__ chiseled onto one of the cave walls:
 
-![synacor_cave_map](https://github.com/tmbarker/synacor-challenge/assets/50631648/5f153d6c-fdf7-4a95-ad0b-bd290dba3894)
+![synacor_cave_map](https://github.com/tmbarker/synacor-challenge/assets/50631648/c1b7de3e-b2fd-48f5-a7a2-5783a2f3e291)
 
 ## Code #6: Exploration, Arithmetic, and Teleportation
 After emerging from the cave system I encountered a set of ruins:
