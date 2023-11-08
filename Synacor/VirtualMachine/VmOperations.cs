@@ -239,20 +239,4 @@ public partial class Vm
     {
         return Result.ok;
     }
-
-    private void EnsureInput()
-    {
-        if (!_state.InputBuffer.Any())
-        {
-            ReadInput();
-        }
-    }
-
-    private void ReadInput()
-    {
-        foreach (var c in $"{Console.ReadLine()}\n")
-        {
-            _state.InputBuffer.Enqueue(c);
-        }
-    }
 }
