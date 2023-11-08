@@ -62,3 +62,15 @@ use tablet
 
 You find yourself writing "pWDWTEfURAdS" on the tablet.  Perhaps it's some kind of code?
 ```
+
+## Code #5: Time To Go Spelunking!
+Playing the text-based RPG lead me into a circuitous cave system with caverns whose names were all permutations of the same couple words:
+```
+You are in a maze of twisty little passages, all alike.
+You are in a twisty alike of little passages, all maze.
+You are in a little maze of twisty passages, all alike.
+```
+
+I considered writing some path-finding code to explore the maze, but not knowing exactly what I was looking for I proceeded to play manually. As I played, I constructed the below map, which allowed me to find a lantern, oil for the lantern, and a __*code*__ chiseled onto one of the cave walls:
+
+![synacor_cave_map](https://github.com/tmbarker/synacor-challenge/assets/50631648/5f153d6c-fdf7-4a95-ad0b-bd290dba3894)
