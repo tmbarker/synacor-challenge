@@ -3,6 +3,9 @@ using Synacor.VirtualMachine;
 
 namespace Synacor.Cli;
 
+/// <summary>
+/// A shell for working with Synacor <see cref="Vm"/> instances
+/// </summary>
 public class Shell
 {
     private const string StartMessage = $"{nameof(Synacor)} {nameof(Shell)} started.";
@@ -26,11 +29,11 @@ public class Shell
 
     public void Start()
     {
-        PrintShellLog(StartMessage);
-        PrintShellLog(HelpHint);
-        PrintShellLog(QuitHint);
-        PrintShellLog(PassThruHint);
-        PrintShellLog();
+        Log(StartMessage);
+        Log(HelpHint);
+        Log(QuitHint);
+        Log(PassThruHint);
+        Log();
         
         while (true)
         {
@@ -39,7 +42,7 @@ public class Shell
 
             if (input == QuitCmdId)
             {
-                PrintShellLog(EndedMessage);
+                Log(EndedMessage);
                 return;
             }
             
@@ -62,16 +65,16 @@ public class Shell
                 continue;
             }
 
-            PrintShellLog($"Command not recognized [{cmd}]");
+            Log(line: $"Command not recognized [{cmd}]");
         }
     }
 
     private void Help(string _)
     {
-        PrintShellLog("Available commands:");
+        Log(line: "Available commands:");
         foreach (var command in _commandTable.Values)
         {
-            PrintShellLog($"-{command.Name}: {command.Desc}");
+            Log(line: $"-{command.Name}: {command.Desc}");
         }
     }
 
@@ -89,18 +92,13 @@ public class Shell
     private void Save(string path)
     {
         _context.Vm.SaveToFile(path);
-        PrintShellLog($"VM state saved to {path}");
+        Log(line: $"VM state saved to {path}");
     }
 
     private void Load(string path)
     {
         _context.Vm = Vm.LoadFromFile(path);
-        PrintShellLog($"VM state loaded from {path}");
-    }
-
-    private static void SolveCoinPuzzle(string _)
-    {
-        PrintShellLog(CoinPuzzle.Solve());
+        Log(line: $"VM state loaded from {path}");
     }
     
     private static bool ParseInput(string input, out string cmd, out string arg)
@@ -138,6 +136,10 @@ public class Shell
             desc: "print all available commands",
             handler: Help);
         yield return new Command(
+            name: "clear",
+            desc: "clear the console",
+            handler: _ => Console.Clear());
+        yield return new Command(
             name: "new",
             desc: "create a new VM instance, loaded with the challenge binary",
             handler: New);
@@ -156,13 +158,13 @@ public class Shell
         yield return new Command(
             name: "solve-coin",
             desc: "solve the coin puzzle and print the solution",
-            handler: SolveCoinPuzzle);
+            handler: _ => Log(line: CoinPuzzle.Solve()));
     }
 
-    private static void PrintShellLog(string? log = null)
+    private static void Log(string? line = null)
     {
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(log);
+        Console.WriteLine(line);
         Console.ResetColor();
     }
 }

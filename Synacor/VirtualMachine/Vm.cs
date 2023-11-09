@@ -1,5 +1,8 @@
 namespace Synacor.VirtualMachine;
 
+/// <summary>
+/// A Virtual Machine adhering to the challenge architecture specification
+/// </summary>
 public partial class Vm
 {
     private const ushort MemSize = 32768;

@@ -1,9 +1,12 @@
 namespace Synacor.Utilities;
 
+/// <summary>
+/// A utility class for solving the "Coin Puzzle", which entails determining the required permutation of
+/// coins to satisfy an equation found in the challenge binary
+/// </summary>
 public static class CoinPuzzle
 {
     private readonly record struct Coin(string Name, int Value);
-
     private static readonly List<Coin> Coins = new()
     {
         new Coin(Name: "red", Value: 2),
@@ -20,7 +23,7 @@ public static class CoinPuzzle
             var enumerated = permutation.ToList();
             if (Check(enumerated))
             {
-                return string.Join(", ", enumerated.Select(coin => coin.Name));
+                return string.Join(separator: ", ", enumerated.Select(coin => coin.Name));
             }
         }
 
@@ -43,27 +46,27 @@ public static class CoinPuzzle
         return a + b * c * c + d * d * d - e == 399;
     }
 
-    private static IEnumerable<IEnumerable<T>> Permute<T>(IEnumerable<T> sequence)
+    private static IEnumerable<IEnumerable<Coin>> Permute(IEnumerable<Coin> sequence)
     {
-        var list = sequence.ToList();
-        if (!list.Any())
+        var enumerated = sequence.ToList();
+        if (!enumerated.Any())
         {
-            yield return Enumerable.Empty<T>();
+            yield return Enumerable.Empty<Coin>();
         }
         else
         {
-            var startingElementIndex = 0;
-            foreach (var startingElement in list)
+            var startingCoinIndex = 0;
+            foreach (var startingCoin in enumerated)
             {
-                var index = startingElementIndex;
-                var remainingItems = list.Where((_, i) => i != index);
+                var index = startingCoinIndex;
+                var remaining = enumerated.Where((_, i) => i != index);
 
-                foreach (var permutationOfRemainder in Permute(remainingItems))
+                foreach (var permutationOfRemainder in Permute(remaining))
                 {
-                    yield return permutationOfRemainder.Prepend(startingElement);
+                    yield return permutationOfRemainder.Prepend(startingCoin);
                 }
 
-                startingElementIndex++;
+                startingCoinIndex++;
             }
         }
     }
