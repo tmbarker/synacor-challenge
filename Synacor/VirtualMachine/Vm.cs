@@ -21,11 +21,13 @@ public partial class Vm
         var status = Result.ok;
         while (status.Ok())
         {
-            status = _vectors[ReadOpcode()].Invoke();
+            status = Step();
         }
         
         return status;
     }
+
+    public Result Step() => _vectors[ReadOpcode()].Invoke();
     
     private Vm(State state)
     {

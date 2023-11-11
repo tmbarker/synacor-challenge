@@ -75,7 +75,10 @@ public class Shell
         LogInfo(info: "Available commands:");
         foreach (var command in _commandTable.Values)
         {
-            LogInfo(info: $"-{command.Name}: {command.Desc}");
+            LogInfo(info: $"- {command.Name}");
+            LogInfo(info: $"  syntax: {command.Syntax}");
+            LogInfo(info: $"  desc:   {command.Desc}");
+            LogInfo();
         }
     }
 
@@ -89,7 +92,7 @@ public class Shell
         _context.Vm.Run();
         _context.Vm.PrintOutputBuffer();
     }
-
+    
     private void Save(string path)
     {
         _context.Vm.SaveToFile(path);
@@ -168,46 +171,67 @@ public class Shell
     {
         yield return new Command(
             name: HelpCmdId,
+            syntax: HelpCmdId,
             desc: "print all available commands",
             handler: Help);
         yield return new Command(
             name: "clear",
+            syntax: "clear",
             desc: "clear the console",
             handler: _ => Console.Clear());
         yield return new Command(
             name: "new",
+            syntax: "new",
             desc: "create a new VM instance, loaded with the challenge binary",
             handler: New);
         yield return new Command(
             name: "run", 
+            syntax: "run",
             desc: "run the current VM instance",
             handler: Run);
         yield return new Command(
-            name: "save", 
+            name: "step",
+            syntax: "step",
+            desc: "step the current VM instance over a single instruction",
+            handler: _ => _context.Vm.Step());
+        yield return new Command(
+            name: "save",
+            syntax: "save [path]",
             desc: "serialize the current VM instance state to the specified path",
             handler: Save);
         yield return new Command(
             name: "load",
+            syntax: "load [path]",
             desc: "replace the current VM instance with one whose state is deserialized from the specified path",
             handler: Load);
         yield return new Command(
             name: "set-reg",
+            syntax: "set-reg [reg] [value]",
             desc: "set the value stored in the specified register",
             handler: SetReg);
         yield return new Command(
             name: "set-ip",
+            syntax: "set-ip [value]",
             desc: "set the instruction pointer to the specified value",
             handler: SetIp);
         yield return new Command(
             name: "get-state",
+            syntax: "get-state",
             desc: "print the state of the VM registers, IP, stack, and buffers (but not the main memory)",
             handler: _ => LogData(data: _context.Vm.GetState()));
         yield return new Command(
+            name: "get-output",
+            syntax: "get-output",
+            desc: "print (and purge) the current VM instance output buffer",
+            handler: _ => _context.Vm.PrintOutputBuffer());
+        yield return new Command(
             name: "solve-coin",
+            syntax: "solve-coin",
             desc: "solve the coin puzzle and print the solution",
             handler: _ => LogInfo(info: CoinPuzzle.Solve()));
         yield return new Command(
             name: "dsm",
+            syntax: "dsm [path]",
             desc: "disassemble the challenge binary and save it to the specified path",
             handler: BinaryUtil.DisassembleChallengeBinary);
     }

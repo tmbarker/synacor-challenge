@@ -114,10 +114,13 @@ public partial class Vm
         public override string ToString()
         {
             var sb = new StringBuilder();
-            
-            sb.AppendLine($"{nameof(Ip)}: {Ip}");
+            var op = Ip < Memory.Length
+                ? $"{(Opcode)Memory[Ip]}"
+                : "INVALID";
+
+            sb.AppendLine($"{nameof(Ip)}: {Ip} [{op}]");
             sb.AppendLine($"{nameof(Registers)}: {Format(Registers.Select((val, i) => $"{i}: {val}"))}");
-            sb.AppendLine($"{nameof(Stack)}: Top -> {Format(Stack)} <- Bottom");
+            sb.AppendLine($"{nameof(Stack)}: {Format(Stack)} <- Bottom");
             sb.AppendLine($"{nameof(InputBuffer)}: {Format(InputBuffer)}");
             sb.AppendLine($"{nameof(OutputBuffer)}: {Format(OutputBuffer)}");
             sb.Append($"{nameof(Memory)}: NA");

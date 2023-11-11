@@ -111,6 +111,13 @@ public static class BinaryUtil
 
     private static string FormatArg(ushort val, Vm.Opcode opcode)
     {
+        //  If the arg corresponds to a register show so explicitly
+        //
+        if (val is >= Vm.MinReg and <= Vm.MaxReg)
+        {
+            return $"reg[{val - Vm.MinReg}]";
+        }
+        
         //  If the opcode is @out, simply show the ascii char
         //
         if (opcode == Vm.Opcode.@out)
@@ -120,11 +127,7 @@ public static class BinaryUtil
                 ? new string(c: @char, count: 1)
                 : @"\n";
         }
-
-        //  If the arg corresponds to a register show so explicitly 
-        //
-        return val is >= Vm.MinReg and <= Vm.MaxReg
-            ? $"reg[{val - Vm.MinReg}]"
-            : $"{val}";
+        
+        return $"{val}";
     }
 }
