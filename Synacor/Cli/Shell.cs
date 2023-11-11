@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Synacor.Utilities;
 using Synacor.VirtualMachine;
 
@@ -29,11 +30,11 @@ public class Shell
 
     public void Start()
     {
-        Log(StartMessage);
-        Log(HelpHint);
-        Log(QuitHint);
-        Log(PassThruHint);
-        Log();
+        LogInfo(StartMessage);
+        LogInfo(HelpHint);
+        LogInfo(QuitHint);
+        LogInfo(PassThruHint);
+        LogInfo();
         
         while (true)
         {
@@ -42,7 +43,7 @@ public class Shell
 
             if (input == QuitCmdId)
             {
-                Log(EndedMessage);
+                LogInfo(EndedMessage);
                 return;
             }
             
@@ -65,16 +66,16 @@ public class Shell
                 continue;
             }
 
-            Log(line: $"Command not recognized [{cmd}]");
+            LogError(error: $"Command not recognized [{cmd}]");
         }
     }
 
     private void Help(string _)
     {
-        Log(line: "Available commands:");
+        LogInfo(info: "Available commands:");
         foreach (var command in _commandTable.Values)
         {
-            Log(line: $"-{command.Name}: {command.Desc}");
+            LogInfo(info: $"-{command.Name}: {command.Desc}");
         }
     }
 
@@ -92,13 +93,47 @@ public class Shell
     private void Save(string path)
     {
         _context.Vm.SaveToFile(path);
-        Log(line: $"VM state saved to {path}");
+        LogInfo(info: $"VM state saved to {path}");
     }
 
     private void Load(string path)
     {
         _context.Vm = Vm.LoadFromFile(path);
-        Log(line: $"VM state loaded from {path}");
+        LogInfo(info: $"VM state loaded from {path}");
+    }
+
+    private void SetIp(string arg)
+    {
+        try
+        {
+            var matches = Regex.Matches(arg, pattern: @"\d+");
+            var number = matches
+                .Select(m => ushort.Parse(m.Value))
+                .First();
+        
+            _context.Vm.SetIp(ip: number);
+        }
+        catch
+        {
+            LogError(error: $"Unable to parse IP[{arg}]");
+        }
+    }
+    
+    private void SetReg(string arg)
+    {
+        try
+        {
+            var matches = Regex.Matches(arg, pattern: @"\d+");
+            var numbers = matches
+                .Select(m => ushort.Parse(m.Value))
+                .ToArray();
+
+            _context.Vm.SetReg(reg: numbers[0], val: numbers[1]);
+        }
+        catch
+        {
+            LogError(error: $"Unable to parse register and value [{arg}]");
+        }
     }
     
     private static bool ParseInput(string input, out string cmd, out string arg)
@@ -156,15 +191,35 @@ public class Shell
             desc: "replace the current VM instance with one whose state is deserialized from the specified path",
             handler: Load);
         yield return new Command(
+            name: "set-reg",
+            desc: "set the value stored in the specified register",
+            handler: SetReg);
+        yield return new Command(
+            name: "set-ip",
+            desc: "set the instruction pointer to the specified value",
+            handler: SetIp);
+        yield return new Command(
+            name: "get-state",
+            desc: "print the state of the VM registers, IP, stack, and buffers (but not the main memory)",
+            handler: _ => LogData(data: _context.Vm.GetState()));
+        yield return new Command(
             name: "solve-coin",
             desc: "solve the coin puzzle and print the solution",
-            handler: _ => Log(line: CoinPuzzle.Solve()));
+            handler: _ => LogInfo(info: CoinPuzzle.Solve()));
+        yield return new Command(
+            name: "dsm",
+            desc: "disassemble the challenge binary and save it to the specified path",
+            handler: BinaryUtil.DisassembleChallengeBinary);
     }
 
-    private static void Log(string? line = null)
+    private static void LogInfo(string? info = null) => Log(log: info, color: ConsoleColor.Green);
+    private static void LogError(string? error = null) => Log(log: error, color: ConsoleColor.Red);
+    private static void LogData(string? data = null) => Log(log: data, color: ConsoleColor.Yellow);
+
+    private static void Log(string? log, ConsoleColor color)
     {
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine(line);
+        Console.ForegroundColor = color;
+        Console.WriteLine(log);
         Console.ResetColor();
     }
 }

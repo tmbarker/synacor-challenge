@@ -9,7 +9,7 @@ public partial class Vm
         awaitingInput
     }
     
-    private enum Opcode
+    public enum Opcode
     {
         halt =  0,
         set  =  1,

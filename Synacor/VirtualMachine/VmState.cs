@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Synacor.VirtualMachine;
 
 public partial class Vm
@@ -25,7 +27,7 @@ public partial class Vm
 
         public void Serialize(string path)
         {
-            using var stream = File.OpenWrite(path);
+            using var stream = File.Open(path, mode: FileMode.Create);
             using var writer = new BinaryWriter(stream);
             
             writer.Write(Ip);
@@ -108,5 +110,21 @@ public partial class Vm
 
             return state;
         }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            
+            sb.AppendLine($"{nameof(Ip)}: {Ip}");
+            sb.AppendLine($"{nameof(Registers)}: {Format(Registers.Select((val, i) => $"{i}: {val}"))}");
+            sb.AppendLine($"{nameof(Stack)}: Top -> {Format(Stack)} <- Bottom");
+            sb.AppendLine($"{nameof(InputBuffer)}: {Format(InputBuffer)}");
+            sb.AppendLine($"{nameof(OutputBuffer)}: {Format(OutputBuffer)}");
+            sb.Append($"{nameof(Memory)}: NA");
+            
+            return sb.ToString();
+        }
+
+        private static string Format<T>(IEnumerable<T> sequence) => string.Join(separator: ", ", sequence);
     }
 }

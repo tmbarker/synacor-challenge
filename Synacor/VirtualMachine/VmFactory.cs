@@ -6,7 +6,7 @@ public partial class Vm
 {
     public static Vm New()
     {
-        var challengeBinary = BinaryProvider.Read();
+        var challengeBinary = BinaryUtil.ReadChallengeBinary();
         var state = new State(challengeBinary);
         var vm = new Vm(state);
         

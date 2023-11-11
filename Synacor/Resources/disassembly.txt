@@ -1,0 +1,2390 @@
+0:     noop
+1:     noop
+2:      out       W
+4:      out       e
+6:      out       l
+8:      out       c
+10:     out       o
+12:     out       m
+14:     out       e
+16:     out        
+18:     out       t
+20:     out       o
+22:     out        
+24:     out       t
+26:     out       h
+28:     out       e
+30:     out        
+32:     out       S
+34:     out       y
+36:     out       n
+38:     out       a
+40:     out       c
+42:     out       o
+44:     out       r
+46:     out        
+48:     out       O
+50:     out       S
+52:     out       C
+54:     out       O
+56:     out       N
+58:     out        
+60:     out       2
+62:     out       0
+64:     out       1
+66:     out       2
+68:     out        
+70:     out       C
+72:     out       h
+74:     out       a
+76:     out       l
+78:     out       l
+80:     out       e
+82:     out       n
+84:     out       g
+86:     out       e
+88:     out       !
+90:     out      \n
+92:     out       P
+94:     out       l
+96:     out       e
+98:     out       a
+100:    out       s
+102:    out       e
+104:    out        
+106:    out       r
+108:    out       e
+110:    out       c
+112:    out       o
+114:    out       r
+116:    out       d
+118:    out        
+120:    out       y
+122:    out       o
+124:    out       u
+126:    out       r
+128:    out        
+130:    out       p
+132:    out       r
+134:    out       o
+136:    out       g
+138:    out       r
+140:    out       e
+142:    out       s
+144:    out       s
+146:    out        
+148:    out       b
+150:    out       y
+152:    out        
+154:    out       p
+156:    out       u
+158:    out       t
+160:    out       t
+162:    out       i
+164:    out       n
+166:    out       g
+168:    out        
+170:    out       c
+172:    out       o
+174:    out       d
+176:    out       e
+178:    out       s
+180:    out        
+182:    out       l
+184:    out       i
+186:    out       k
+188:    out       e
+190:    out      \n
+192:    out       t
+194:    out       h
+196:    out       i
+198:    out       s
+200:    out        
+202:    out       o
+204:    out       n
+206:    out       e
+208:    out        
+210:    out       i
+212:    out       n
+214:    out       t
+216:    out       o
+218:    out        
+220:    out       t
+222:    out       h
+224:    out       e
+226:    out        
+228:    out       c
+230:    out       h
+232:    out       a
+234:    out       l
+236:    out       l
+238:    out       e
+240:    out       n
+242:    out       g
+244:    out       e
+246:    out        
+248:    out       w
+250:    out       e
+252:    out       b
+254:    out       s
+256:    out       i
+258:    out       t
+260:    out       e
+262:    out       :
+264:    out        
+266:    out       I
+268:    out       m
+270:    out       o
+272:    out       F
+274:    out       z
+276:    out       t
+278:    out       W
+280:    out       Q
+282:    out       C
+284:    out       v
+286:    out       x
+288:    out       j
+290:    out      \n
+292:    out      \n
+294:    out       E
+296:    out       x
+298:    out       e
+300:    out       c
+302:    out       u
+304:    out       t
+306:    out       i
+308:    out       n
+310:    out       g
+312:    out        
+314:    out       s
+316:    out       e
+318:    out       l
+320:    out       f
+322:    out       -
+324:    out       t
+326:    out       e
+328:    out       s
+330:    out       t
+332:    out       .
+334:    out       .
+336:    out       .
+338:    out      \n
+340:    out      \n
+342:    jmp     369
+344:    out       j
+346:    out       m
+348:    out       p
+350:    out        
+352:    out       f
+354:    out       a
+356:    out       i
+358:    out       l
+360:    out       s
+362:    out      \n
+364:   halt
+365:   noop
+366:   noop
+367:   noop
+368:   noop
+369:   noop
+370:   noop
+371:   noop
+372:   noop
+373:   noop
+374:    jmp     380
+376:    jmp     390
+378:    jmp     419
+380:    jmp     506
+382:    jmp     446
+384:    jmp     475
+386:   noop
+387:   noop
+388:   noop
+389:   noop
+390:    out       j
+392:    out       m
+394:    out       p
+396:    out        
+398:    out       l
+400:    out       a
+402:    out       n
+404:    out       d
+406:    out       s
+408:    out        
+410:    out       -
+412:    out       2
+414:    out      \n
+416:   halt
+417:   noop
+418:   noop
+419:    out       j
+421:    out       m
+423:    out       p
+425:    out        
+427:    out       l
+429:    out       a
+431:    out       n
+433:    out       d
+435:    out       s
+437:    out        
+439:    out       -
+441:    out       1
+443:    out      \n
+445:   halt
+446:   noop
+447:   noop
+448:    out       j
+450:    out       m
+452:    out       p
+454:    out        
+456:    out       l
+458:    out       a
+460:    out       n
+462:    out       d
+464:    out       s
+466:    out        
+468:    out       +
+470:    out       1
+472:    out      \n
+474:   halt
+475:   noop
+476:   noop
+477:   noop
+478:   noop
+479:    out       j
+481:    out       m
+483:    out       p
+485:    out        
+487:    out       l
+489:    out       a
+491:    out       n
+493:    out       d
+495:    out       s
+497:    out        
+499:    out       +
+501:    out       2
+503:    out      \n
+505:   halt
+506:     jt       0    1096
+509:     jf       1    1096
+512:     jt       1     517
+515:    jmp    1096
+517:     jf       0     522
+520:    jmp    1096
+522:     jt  reg[0]    1115
+525:     jt  reg[1]    1115
+528:     jt  reg[2]    1115
+531:     jt  reg[3]    1115
+534:     jt  reg[4]    1115
+537:     jt  reg[5]    1115
+540:     jt  reg[6]    1115
+543:     jt  reg[7]    1115
+546:    set  reg[0]       1
+549:     jf  reg[0]    1140
+552:    set  reg[0]       0
+555:     jt  reg[0]    1140
+558:    add  reg[0]       1       1
+562:     jt  reg[0]     586
+565:    out       n
+567:    out       o
+569:    out        
+571:    out       a
+573:    out       d
+575:    out       d
+577:    out        
+579:    out       o
+581:    out       p
+583:    out      \n
+585:   halt
+586:     eq  reg[1]  reg[0]       2
+590:     jt  reg[1]     612
+593:    out       n
+595:    out       o
+597:    out        
+599:    out       e
+601:    out       q
+603:    out        
+605:    out       o
+607:    out       p
+609:    out      \n
+611:   halt
+612:   push  reg[0]
+614:   push  reg[1]
+616:    pop  reg[0]
+618:    pop  reg[1]
+620:     eq  reg[2]  reg[1]       2
+624:     jf  reg[2]    1180
+627:     eq  reg[2]  reg[0]       1
+631:     jf  reg[2]    1180
+634:     gt  reg[2]  reg[1]  reg[0]
+638:     jf  reg[2]    1161
+641:     gt  reg[2]  reg[0]  reg[1]
+645:     jt  reg[2]    1161
+648:     gt  reg[2]      42      42
+652:     jt  reg[2]    1161
+655:    and  reg[0]   28912   19626
+659:     eq  reg[1]  reg[0]   16544
+663:     jf  reg[1]    1199
+666:     or  reg[1]   28912   19626
+670:     eq  reg[0]  reg[1]   31994
+674:     jt  reg[0]     706
+677:    out       n
+679:    out       o
+681:    out        
+683:    out       b
+685:    out       i
+687:    out       t
+689:    out       w
+691:    out       i
+693:    out       s
+695:    out       e
+697:    out        
+699:    out       o
+701:    out       r
+703:    out      \n
+705:   halt
+706:    not  reg[0]       0
+709:     eq  reg[1]  reg[0]   32767
+713:     jf  reg[1]    1230
+716:    not  reg[0]   21845
+719:     eq  reg[1]  reg[0]   10922
+723:     jf  reg[1]    1230
+726:   call    1307
+728:    jmp    1311
+730:    pop  reg[0]
+732:     eq  reg[1]  reg[0]     730
+736:     jt  reg[1]    1311
+739:     eq  reg[1]  reg[0]     728
+743:     jf  reg[1]    1311
+746:    set  reg[0]    1309
+749:   call  reg[0]
+751:    jmp    1311
+753:    pop  reg[0]
+755:     eq  reg[1]  reg[0]     753
+759:     jt  reg[1]    1311
+762:     eq  reg[1]  reg[0]     751
+766:     jf  reg[1]    1311
+769:    add  reg[0]   32767   32767
+773:     eq  reg[1]  reg[0]   32766
+777:     jf  reg[1]    1334
+780:     eq  reg[1]   32766  reg[0]
+784:     jf  reg[1]    1334
+787:    add  reg[0]   16384   16384
+791:     jt  reg[0]    1334
+794:    add  reg[0]   16384   16384
+798:     jt  reg[0]    1334
+801:   mult  reg[0]       6       9
+805:     eq  reg[1]  reg[0]      42
+809:     jt  reg[1]    1403
+812:     eq  reg[1]  reg[0]      54
+816:     jf  reg[1]    1436
+819:   mult  reg[0]   12345   32123
+823:     eq  reg[1]  reg[0]      99
+827:     jf  reg[1]    1334
+830:    mod  reg[0]       6       3
+834:     eq  reg[1]  reg[0]       0
+838:     jf  reg[1]    1459
+841:    mod  reg[0]      70       6
+845:     eq  reg[1]  reg[0]       4
+849:     jf  reg[1]    1459
+852:   mult  reg[0]   32766      15
+856:     eq  reg[1]  reg[0]   32738
+860:     jf  reg[1]    1334
+863:    jmp     867
+867:   rmem  reg[0]     865
+870:     eq  reg[1]  reg[0]   20000
+874:     jf  reg[1]    1261
+877:    add  reg[2]     865       1
+881:   rmem  reg[0]  reg[2]
+884:     eq  reg[1]  reg[0]   10000
+888:     jf  reg[1]    1261
+891:    set  reg[0]     865
+894:   wmem  reg[0]   30000
+897:   rmem  reg[2]  reg[0]
+900:     eq  reg[1]  reg[2]   30000
+904:     jf  reg[1]    1284
+907:   call    1745
+909:   rmem  reg[0]    6090
+912:     eq  reg[1]  reg[0]      11
+916:     jf  reg[1]    1261
+919:    add  reg[2]    6090       1
+923:   rmem  reg[0]  reg[2]
+926:     eq  reg[1]  reg[0]     116
+930:     jf  reg[1]    1261
+933:   wmem  reg[2]      84
+936:   rmem  reg[0]  reg[2]
+939:     eq  reg[1]  reg[0]     116
+943:     jt  reg[1]    1284
+946:     eq  reg[1]  reg[0]      84
+950:     jf  reg[1]    1284
+953:   wmem     959      21
+956:   wmem     960       7
+959:    jmp     963
+961:    out       Ϩ
+963:    out       w
+965:    out       m
+967:    out       e
+969:    out       m
+971:    out        
+973:    out       o
+975:    out       p
+977:    out       w
+979:    out       r
+981:    out       i
+983:    out       t
+985:    out       e
+987:    out        
+989:    out       f
+991:    out       a
+993:    out       i
+995:    out       l
+997:    out      \n
+999:   halt
+1000:   add  reg[1]      10    6102
+1004:   add  reg[1]  reg[1]       1
+1008:  rmem  reg[2]    6138
+1011:   add  reg[2]  reg[2]    6138
+1015:   set  reg[0]    6138
+1018:   add  reg[0]  reg[0]       1
+1022:    gt  reg[3]  reg[0]  reg[2]
+1026:    jt  reg[3]    1045
+1029:  rmem  reg[4]  reg[0]
+1032:  wmem  reg[1]  reg[4]
+1035:   add  reg[0]  reg[0]       1
+1039:   add  reg[1]  reg[1]       1
+1043:   jmp    1022
+1045:  rmem  reg[0]    6102
+1048:  rmem  reg[1]    6121
+1051:   add  reg[0]  reg[0]  reg[1]
+1055:   add  reg[0]  reg[0]       1
+1059:  wmem    6102  reg[0]
+1062:  wmem    6121      44
+1065:   set  reg[0]    6102
+1068:  call    1540
+1070:  push  reg[0]
+1072:  push  reg[1]
+1074:  push  reg[2]
+1076:   set  reg[0]   26865
+1079:   set  reg[1]    1553
+1082:   add  reg[2]   16691   11842
+1086:  call    1480
+1088:   pop  reg[2]
+1090:   pop  reg[1]
+1092:   pop  reg[0]
+1094:   jmp    2756
+1096:   out       n
+1098:   out       o
+1100:   out        
+1102:   out       j
+1104:   out       t
+1106:   out       /
+1108:   out       j
+1110:   out       f
+1112:   out      \n
+1114:  halt
+1115:   out       n
+1117:   out       o
+1119:   out       n
+1121:   out       z
+1123:   out       e
+1125:   out       r
+1127:   out       o
+1129:   out        
+1131:   out       r
+1133:   out       e
+1135:   out       g
+1137:   out      \n
+1139:  halt
+1140:   out       n
+1142:   out       o
+1144:   out        
+1146:   out       s
+1148:   out       e
+1150:   out       t
+1152:   out        
+1154:   out       o
+1156:   out       p
+1158:   out      \n
+1160:  halt
+1161:   out       n
+1163:   out       o
+1165:   out        
+1167:   out       g
+1169:   out       t
+1171:   out        
+1173:   out       o
+1175:   out       p
+1177:   out      \n
+1179:  halt
+1180:   out       n
+1182:   out       o
+1184:   out        
+1186:   out       s
+1188:   out       t
+1190:   out       a
+1192:   out       c
+1194:   out       k
+1196:   out      \n
+1198:  halt
+1199:   out       n
+1201:   out       o
+1203:   out        
+1205:   out       b
+1207:   out       i
+1209:   out       t
+1211:   out       w
+1213:   out       i
+1215:   out       s
+1217:   out       e
+1219:   out        
+1221:   out       a
+1223:   out       n
+1225:   out       d
+1227:   out      \n
+1229:  halt
+1230:   out       n
+1232:   out       o
+1234:   out        
+1236:   out       b
+1238:   out       i
+1240:   out       t
+1242:   out       w
+1244:   out       i
+1246:   out       s
+1248:   out       e
+1250:   out        
+1252:   out       n
+1254:   out       o
+1256:   out       t
+1258:   out      \n
+1260:  halt
+1261:   out       n
+1263:   out       o
+1265:   out        
+1267:   out       r
+1269:   out       m
+1271:   out       e
+1273:   out       m
+1275:   out        
+1277:   out       o
+1279:   out       p
+1281:   out      \n
+1283:  halt
+1284:   out       n
+1286:   out       o
+1288:   out        
+1290:   out       w
+1292:   out       m
+1294:   out       e
+1296:   out       m
+1298:   out        
+1300:   out       o
+1302:   out       p
+1304:   out      \n
+1306:  halt
+1307:   jmp     730
+1309:   jmp     753
+1311:   out       n
+1313:   out       o
+1315:   out        
+1317:   out       c
+1319:   out       a
+1321:   out       l
+1323:   out       l
+1325:   out        
+1327:   out       o
+1329:   out       p
+1331:   out      \n
+1333:  halt
+1334:   out       n
+1336:   out       o
+1338:   out        
+1340:   out       m
+1342:   out       o
+1344:   out       d
+1346:   out       u
+1348:   out       l
+1350:   out       o
+1352:   out        
+1354:   out       m
+1356:   out       a
+1358:   out       t
+1360:   out       h
+1362:   out        
+1364:   out       d
+1366:   out       u
+1368:   out       r
+1370:   out       i
+1372:   out       n
+1374:   out       g
+1376:   out        
+1378:   out       a
+1380:   out       d
+1382:   out       d
+1384:   out        
+1386:   out       o
+1388:   out       r
+1390:   out        
+1392:   out       m
+1394:   out       u
+1396:   out       l
+1398:   out       t
+1400:   out      \n
+1402:  halt
+1403:   out       n
+1405:   out       o
+1407:   out       t
+1409:   out        
+1411:   out       h
+1413:   out       i
+1415:   out       t
+1417:   out       c
+1419:   out       h
+1421:   out       h
+1423:   out       i
+1425:   out       k
+1427:   out       i
+1429:   out       n
+1431:   out       g
+1433:   out      \n
+1435:  halt
+1436:   out       n
+1438:   out       o
+1440:   out        
+1442:   out       m
+1444:   out       u
+1446:   out       l
+1448:   out       t
+1450:   out        
+1452:   out       o
+1454:   out       p
+1456:   out      \n
+1458:  halt
+1459:   out       n
+1461:   out       o
+1463:   out        
+1465:   out       m
+1467:   out       o
+1469:   out       d
+1471:   out        
+1473:   out       o
+1475:   out       p
+1477:   out      \n
+1479:  halt
+1480:  push  reg[0]
+1482:  push  reg[3]
+1484:  push  reg[4]
+1486:  push  reg[5]
+1488:  push  reg[6]
+1490:   set  reg[6]  reg[0]
+1493:   set  reg[5]  reg[1]
+1496:  rmem  reg[4]  reg[0]
+1499:   set  reg[1]       0
+1502:   add  reg[3]       1  reg[1]
+1506:    gt  reg[0]  reg[3]  reg[4]
+1510:    jt  reg[0]    1529
+1513:   add  reg[3]  reg[3]  reg[6]
+1517:  rmem  reg[0]  reg[3]
+1520:  call  reg[5]
+1522:   add  reg[1]  reg[1]       1
+1526:    jt  reg[1]    1502
+1529:   pop  reg[6]
+1531:   pop  reg[5]
+1533:   pop  reg[4]
+1535:   pop  reg[3]
+1537:   pop  reg[0]
+1539:   ret
+1540:  push  reg[1]
+1542:   set  reg[1]    1550
+1545:  call    1480
+1547:   pop  reg[1]
+1549:   ret
+1550:   out       耀
+1552:   ret
+1553:  push  reg[1]
+1555:   set  reg[1]  reg[2]
+1558:  call    2147
+1560:   out       耀
+1562:   pop  reg[1]
+1564:   ret
+1565:  push  reg[1]
+1567:  push  reg[3]
+1569:  rmem  reg[3]  reg[0]
+1572:    jf  reg[3]    1585
+1575:  call    1480
+1577:    jt  reg[1]    1585
+1580:   set  reg[0]  reg[2]
+1583:   jmp    1588
+1585:   set  reg[0]   32767
+1588:   pop  reg[3]
+1590:   pop  reg[1]
+1592:   ret
+1593:  push  reg[1]
+1595:  push  reg[2]
+1597:   set  reg[2]  reg[1]
+1600:   set  reg[1]    1627
+1603:  call    1565
+1605:   pop  reg[2]
+1607:   pop  reg[1]
+1609:   ret
+1610:  push  reg[1]
+1612:  push  reg[2]
+1614:   set  reg[2]  reg[1]
+1617:   set  reg[1]    1670
+1620:  call    1565
+1622:   pop  reg[2]
+1624:   pop  reg[1]
+1626:   ret
+1627:    eq  reg[0]  reg[0]  reg[2]
+1631:    jf  reg[0]    1640
+1634:   set  reg[2]  reg[1]
+1637:   set  reg[1]   32767
+1640:   ret
+1641:  push  reg[3]
+1643:   add  reg[3]  reg[2]       1
+1647:   add  reg[3]  reg[3]  reg[1]
+1651:  rmem  reg[3]  reg[3]
+1654:    eq  reg[3]  reg[0]  reg[3]
+1658:    jt  reg[3]    1667
+1661:   set  reg[2]  reg[1]
+1664:   set  reg[1]   32767
+1667:   pop  reg[3]
+1669:   ret
+1670:  push  reg[1]
+1672:   set  reg[1]  reg[2]
+1675:  call    1689
+1677:   pop  reg[1]
+1679:    jf  reg[0]    1688
+1682:   set  reg[2]  reg[1]
+1685:   set  reg[1]   32767
+1688:   ret
+1689:  push  reg[1]
+1691:  push  reg[2]
+1693:  push  reg[3]
+1695:  push  reg[4]
+1697:  rmem  reg[3]  reg[0]
+1700:  rmem  reg[4]  reg[1]
+1703:    eq  reg[2]  reg[3]  reg[4]
+1707:    jf  reg[2]    1733
+1710:    or  reg[2]  reg[3]  reg[4]
+1714:    jf  reg[2]    1728
+1717:   set  reg[2]  reg[1]
+1720:   set  reg[1]    1641
+1723:  call    1480
+1725:    jf  reg[1]    1733
+1728:   set  reg[0]       1
+1731:   jmp    1736
+1733:   set  reg[0]       0
+1736:   pop  reg[4]
+1738:   pop  reg[3]
+1740:   pop  reg[2]
+1742:   pop  reg[1]
+1744:   ret
+1745:  push  reg[0]
+1747:  push  reg[1]
+1749:   set  reg[1]    6090
+1752:  rmem  reg[0]  reg[1]
+1755:  push  reg[1]
+1757:  mult  reg[1]  reg[1]  reg[1]
+1761:  call    2147
+1763:   set  reg[1]   16724
+1766:  call    2147
+1768:   pop  reg[1]
+1770:  wmem  reg[1]  reg[0]
+1773:   add  reg[1]  reg[1]       1
+1777:    eq  reg[0]   29957  reg[1]
+1781:    jf  reg[0]    1752
+1784:   pop  reg[1]
+1786:   pop  reg[0]
+1788:   ret
+1789:  push  reg[0]
+1791:  push  reg[2]
+1793:  push  reg[3]
+1795:  push  reg[4]
+1797:  push  reg[5]
+1799:   add  reg[2]  reg[1]  reg[0]
+1803:   set  reg[0]  reg[1]
+1806:   set  reg[5]       0
+1809:   add  reg[0]  reg[0]       1
+1813:    gt  reg[3]  reg[0]  reg[2]
+1817:    jt  reg[3]    1838
+1820:    in  reg[4]
+1822:    eq  reg[3]  reg[4]      10
+1826:    jt  reg[3]    1838
+1829:  wmem  reg[0]  reg[4]
+1832:   add  reg[5]  reg[5]       1
+1836:   jmp    1809
+1838:  wmem  reg[1]  reg[5]
+1841:    eq  reg[3]  reg[4]      10
+1845:    jt  reg[3]    1852
+1848:    in  reg[4]
+1850:   jmp    1841
+1852:   pop  reg[5]
+1854:   pop  reg[4]
+1856:   pop  reg[3]
+1858:   pop  reg[2]
+1860:   pop  reg[0]
+1862:   ret
+1863:  push  reg[3]
+1865:  push  reg[4]
+1867:  push  reg[5]
+1869:  push  reg[6]
+1871:   set  reg[6]       1
+1874:   add  reg[4]  reg[3]  reg[6]
+1878:  rmem  reg[4]  reg[4]
+1881:   add  reg[5]    6147  reg[6]
+1885:  wmem  reg[5]  reg[4]
+1888:   add  reg[6]  reg[6]       1
+1892:  rmem  reg[5]    6147
+1895:    gt  reg[4]  reg[6]  reg[5]
+1899:    jf  reg[4]    1874
+1902:   set  reg[3]       0
+1905:   set  reg[4]       0
+1908:  rmem  reg[5]    6147
+1911:   mod  reg[5]  reg[4]  reg[5]
+1915:   add  reg[5]  reg[5]    6147
+1919:   add  reg[5]  reg[5]       1
+1923:  rmem  reg[6]  reg[5]
+1926:  mult  reg[6]  reg[6]    5249
+1930:   add  reg[6]  reg[6]   12345
+1934:  wmem  reg[5]  reg[6]
+1937:  push  reg[0]
+1939:  push  reg[1]
+1941:   set  reg[1]  reg[6]
+1944:  call    2147
+1946:   set  reg[6]  reg[0]
+1949:   pop  reg[1]
+1951:   pop  reg[0]
+1953:  rmem  reg[5]  reg[1]
+1956:   mod  reg[6]  reg[6]  reg[5]
+1960:   add  reg[6]  reg[6]       1
+1964:    gt  reg[5]  reg[6]  reg[2]
+1968:    jt  reg[5]    1974
+1971:   set  reg[3]       1
+1974:   add  reg[6]  reg[6]  reg[1]
+1978:  rmem  reg[6]  reg[6]
+1981:   add  reg[4]  reg[4]       1
+1985:   add  reg[5]  reg[4]    6151
+1989:  wmem  reg[5]  reg[6]
+1992:  rmem  reg[5]    6151
+1995:    eq  reg[5]  reg[4]  reg[5]
+1999:    jf  reg[5]    1908
+2002:    jf  reg[3]    1902
+2005:  push  reg[0]
+2007:   set  reg[0]    6151
+2010:  call    1540
+2012:   pop  reg[0]
+2014:   pop  reg[6]
+2016:   pop  reg[5]
+2018:   pop  reg[4]
+2020:   pop  reg[3]
+2022:   ret
+2023:  push  reg[0]
+2025:  push  reg[1]
+2027:  push  reg[2]
+2029:  push  reg[3]
+2031:  push  reg[4]
+2033:  push  reg[5]
+2035:   set  reg[2]       1
+2038:   set  reg[5]       0
+2041:    jf  reg[0]    2114
+2044:    eq  reg[4]  reg[2]   10000
+2048:   set  reg[3]  reg[0]
+2051:    jt  reg[4]    2062
+2054:  mult  reg[1]  reg[2]      10
+2058:   mod  reg[3]  reg[0]  reg[1]
+2062:   set  reg[4]       0
+2065:  mult  reg[2]  reg[2]   32767
+2069:    jf  reg[3]    2082
+2072:   add  reg[4]  reg[4]       1
+2076:   add  reg[3]  reg[3]  reg[2]
+2080:   jmp    2069
+2082:  mult  reg[2]  reg[2]   32767
+2086:  mult  reg[3]  reg[4]  reg[2]
+2090:  mult  reg[3]  reg[3]   32767
+2094:   add  reg[0]  reg[0]  reg[3]
+2098:   add  reg[4]  reg[4]      48
+2102:  mult  reg[2]  reg[2]      10
+2106:   add  reg[5]  reg[5]       1
+2110:  push  reg[4]
+2112:   jmp    2041
+2114:    jt  reg[5]    2121
+2117:   out       0
+2119:   jmp    2134
+2121:    jf  reg[5]    2134
+2124:   pop  reg[0]
+2126:   out       耀
+2128:   add  reg[5]  reg[5]   32767
+2132:   jmp    2121
+2134:   pop  reg[5]
+2136:   pop  reg[4]
+2138:   pop  reg[3]
+2140:   pop  reg[2]
+2142:   pop  reg[1]
+2144:   pop  reg[0]
+2146:   ret
+2147:  push  reg[1]
+2149:  push  reg[2]
+2151:   and  reg[2]  reg[0]  reg[1]
+2155:   not  reg[2]  reg[2]
+2158:    or  reg[0]  reg[0]  reg[1]
+2162:   and  reg[0]  reg[0]  reg[2]
+2166:   pop  reg[2]
+2168:   pop  reg[1]
+2170:   ret
+2171:   add  reg[0]  reg[0]  reg[1]
+2175:    gt  reg[1]  reg[1]  reg[0]
+2179:   ret
+2180:  push  reg[2]
+2182:    gt  reg[2]  reg[1]  reg[0]
+2186:  mult  reg[1]  reg[1]   32767
+2190:   add  reg[0]  reg[0]  reg[1]
+2194:   set  reg[1]  reg[2]
+2197:   pop  reg[2]
+2199:   ret
+2200:    jf  reg[0]    2263
+2203:    jf  reg[1]    2263
+2206:  push  reg[2]
+2208:  push  reg[3]
+2210:    gt  reg[2]  reg[1]  reg[0]
+2214:    jt  reg[2]    2226
+2217:   set  reg[2]  reg[0]
+2220:   set  reg[0]  reg[1]
+2223:   set  reg[1]  reg[2]
+2226:   set  reg[2]  reg[0]
+2229:   set  reg[0]       0
+2232:   add  reg[0]  reg[0]  reg[1]
+2236:    gt  reg[3]  reg[1]  reg[0]
+2240:    jt  reg[3]    2255
+2243:   add  reg[2]  reg[2]   32767
+2247:    jt  reg[2]    2232
+2250:   set  reg[1]       0
+2253:   jmp    2258
+2255:   set  reg[1]       1
+2258:   pop  reg[3]
+2260:   pop  reg[2]
+2262:   ret
+2263:   set  reg[0]       0
+2266:   set  reg[1]       0
+2269:   ret
+2270:  push  reg[1]
+2272:  push  reg[2]
+2274:    jf  reg[1]    2298
+2277:   add  reg[1]  reg[1]   32767
+2281:   and  reg[2]  reg[0]   16384
+2285:  mult  reg[0]  reg[0]       2
+2289:    jf  reg[2]    2274
+2292:    or  reg[0]  reg[0]       1
+2296:   jmp    2274
+2298:   pop  reg[2]
+2300:   pop  reg[1]
+2302:   ret
+2303:  push  reg[1]
+2305:    gt  reg[1]  reg[0]      14
+2309:    jt  reg[1]    2331
+2312:   set  reg[1]  reg[0]
+2315:   set  reg[0]       1
+2318:    jf  reg[1]    2334
+2321:   add  reg[1]  reg[1]   32767
+2325:  mult  reg[0]  reg[0]       2
+2329:   jmp    2318
+2331:   set  reg[0]   32767
+2334:   pop  reg[1]
+2336:   ret
+2337:   jmp    2756
+2343:  halt
+2348:  halt
+2353:  halt
+2358:  halt
+2363:  halt
+2368:  halt
+2373:  halt
+2378:  halt
+2383:  halt
+2388:  halt
+2393:  halt
+2398:  halt
+2443:  halt
+2473:  halt
+2478:  halt
+2483:  halt
+2484:  halt
+2494:  halt
+2499:  halt
+2504:  halt
+2509:  halt
+2514:  halt
+2519:  halt
+2524:  halt
+2529:  halt
+2534:  halt
+2539:  halt
+2544:  halt
+2549:  halt
+2554:  halt
+2559:  halt
+2564:  halt
+2569:  halt
+2574:  halt
+2579:  halt
+2674:  halt
+2679:  halt
+2684:  halt
+2697:  halt
+2737:  halt
+2741:  halt
+2749:  halt
+2753:  halt
+2755:  halt
+2756:  push  reg[0]
+2758:  push  reg[1]
+2760:  push  reg[2]
+2762:  push  reg[3]
+2764:  rmem  reg[1]    2754
+2767:  rmem  reg[0]    2755
+2770:    eq  reg[0]  reg[0]  reg[1]
+2774:    jt  reg[0]    2792
+2777:  rmem  reg[0]    2754
+2780:   add  reg[0]  reg[0]       4
+2784:  rmem  reg[0]  reg[0]
+2787:    jf  reg[0]    2792
+2790:  call  reg[0]
+2792:  rmem  reg[1]    2754
+2795:  rmem  reg[0]    2755
+2798:    eq  reg[0]  reg[0]  reg[1]
+2802:    jt  reg[0]    2813
+2805:   set  reg[0]   25988
+2808:  wmem  reg[0]       0
+2811:  call    2986
+2813:  wmem    2755  reg[1]
+2816:  push  reg[0]
+2818:  push  reg[1]
+2820:  push  reg[2]
+2822:   set  reg[0]   27428
+2825:   set  reg[1]    1553
+2828:   add  reg[2]    3958   20602
+2832:  call    1480
+2834:   pop  reg[2]
+2836:   pop  reg[1]
+2838:   pop  reg[0]
+2840:   set  reg[0]      32
+2843:   set  reg[1]   25988
+2846:  call    1789
+2848:   out      \n
+2850:   out      \n
+2852:   set  reg[0]   25988
+2855:   set  reg[1]      32
+2858:  call    1593
+2860:    eq  reg[1]  reg[0]   32767
+2864:    jf  reg[1]    2870
+2867:  rmem  reg[0]   25988
+2870:   set  reg[2]  reg[0]
+2873:  rmem  reg[1]   25988
+2876:  push  reg[1]
+2878:  wmem   25988  reg[2]
+2881:   set  reg[0]   27412
+2884:   set  reg[1]   25988
+2887:  call    1610
+2889:   pop  reg[1]
+2891:  wmem   25988  reg[1]
+2894:    eq  reg[1]  reg[0]   32767
+2898:    jf  reg[1]    2907
+2901:   set  reg[0]       0
+2904:   set  reg[2]       0
+2907:   add  reg[1]   27420       1
+2911:   add  reg[1]  reg[1]  reg[0]
+2915:  rmem  reg[1]  reg[1]
+2918:  rmem  reg[3]   25988
+2921:    eq  reg[3]  reg[3]  reg[2]
+2925:    jt  reg[3]    2966
+2928:  mult  reg[0]  reg[2]   32767
+2932:  rmem  reg[3]   25988
+2935:   add  reg[3]  reg[0]  reg[3]
+2939:    jf  reg[2]    2946
+2942:   add  reg[3]  reg[3]   32767
+2946:   mod  reg[3]  reg[3]      32
+2950:   add  reg[0]   25988  reg[2]
+2954:    jf  reg[2]    2961
+2957:   add  reg[0]  reg[0]       1
+2961:  wmem  reg[0]  reg[3]
+2964:   jmp    2972
+2966:   set  reg[0]   25988
+2969:  wmem  reg[0]       0
+2972:  call  reg[1]
+2974:    jt  reg[1]    2764
+2977:   pop  reg[3]
+2979:   pop  reg[2]
+2981:   pop  reg[1]
+2983:   pop  reg[0]
+2985:   ret
+2986:  push  reg[0]
+2988:  push  reg[1]
+2990:  push  reg[2]
+2992:  rmem  reg[1]  reg[0]
+2995:    jf  reg[1]    3054
+2998:  call    5943
+3000:    jf  reg[0]    3028
+3003:  push  reg[0]
+3005:  call    6012
+3007:   set  reg[1]  reg[0]
+3010:   pop  reg[0]
+3012:    jf  reg[1]    3028
+3015:   add  reg[1]  reg[0]       1
+3019:  rmem  reg[0]  reg[1]
+3022:  call    1540
+3024:   out      \n
+3026:   jmp    3260
+3028:  push  reg[0]
+3030:  push  reg[1]
+3032:  push  reg[2]
+3034:   set  reg[0]   27446
+3037:   set  reg[1]    1553
+3040:   add  reg[2]   10341   18451
+3044:  call    1480
+3046:   pop  reg[2]
+3048:   pop  reg[1]
+3050:   pop  reg[0]
+3052:   jmp    3260
+3054:  rmem  reg[0]    2754
+3057:  push  reg[0]
+3059:   out       =
+3061:   out       =
+3063:   out        
+3065:   add  reg[0]  reg[0]       0
+3069:  rmem  reg[0]  reg[0]
+3072:  call    1540
+3074:   out        
+3076:   out       =
+3078:   out       =
+3080:   out      \n
+3082:   pop  reg[0]
+3084:  push  reg[0]
+3086:   add  reg[0]  reg[0]       1
+3090:  rmem  reg[0]  reg[0]
+3093:  rmem  reg[1]  reg[0]
+3096:    eq  reg[1]  reg[1]       2
+3100:    jf  reg[1]    3126
+3103:  push  reg[0]
+3105:   set  reg[0]    2702
+3108:  call    6012
+3110:   set  reg[1]  reg[0]
+3113:   pop  reg[0]
+3115:   add  reg[0]  reg[0]       1
+3119:   add  reg[0]  reg[0]  reg[1]
+3123:  rmem  reg[0]  reg[0]
+3126:  call    1540
+3128:   out      \n
+3130:   pop  reg[0]
+3132:  push  reg[0]
+3134:  call    5845
+3136:    jf  reg[0]    3168
+3139:  push  reg[0]
+3141:  push  reg[1]
+3143:  push  reg[2]
+3145:   set  reg[0]   27469
+3148:   set  reg[1]    1553
+3151:   add  reg[2]    3231    7496
+3155:  call    1480
+3157:   pop  reg[2]
+3159:   pop  reg[1]
+3161:   pop  reg[0]
+3163:  rmem  reg[2]    2754
+3166:  call    5898
+3168:   pop  reg[0]
+3170:  push  reg[0]
+3172:   add  reg[0]  reg[0]       2
+3176:  rmem  reg[0]  reg[0]
+3179:  rmem  reg[0]  reg[0]
+3182:    eq  reg[2]  reg[0]       1
+3186:   out      \n
+3188:   out       T
+3190:   out       h
+3192:   out       e
+3194:   out       r
+3196:   out       e
+3198:   out        
+3200:    jt  reg[2]    3211
+3203:   out       a
+3205:   out       r
+3207:   out       e
+3209:   jmp    3215
+3211:   out       i
+3213:   out       s
+3215:   out        
+3217:  call    2023
+3219:   out        
+3221:   out       e
+3223:   out       x
+3225:   out       i
+3227:   out       t
+3229:    eq  reg[2]  reg[0]       1
+3233:    jt  reg[2]    3238
+3236:   out       s
+3238:   out       :
+3240:   out      \n
+3242:   pop  reg[0]
+3244:  push  reg[0]
+3246:   add  reg[0]  reg[0]       2
+3250:  rmem  reg[0]  reg[0]
+3253:   set  reg[1]    5836
+3256:  call    1480
+3258:   pop  reg[0]
+3260:   pop  reg[2]
+3262:   pop  reg[1]
+3264:   pop  reg[0]
+3266:   ret
+3267:  push  reg[0]
+3269:  push  reg[1]
+3271:  push  reg[2]
+3273:   set  reg[1]  reg[0]
+3276:  rmem  reg[0]    2754
+3279:   add  reg[0]  reg[0]       2
+3283:  rmem  reg[0]  reg[0]
+3286:  call    1610
+3288:    eq  reg[2]  reg[0]   32767
+3292:    jt  reg[2]    3324
+3295:  rmem  reg[2]    2754
+3298:   add  reg[2]  reg[2]       3
+3302:  rmem  reg[2]  reg[2]
+3305:   add  reg[2]  reg[2]       1
+3309:   add  reg[2]  reg[2]  reg[0]
+3313:  rmem  reg[2]  reg[2]
+3316:  wmem    2754  reg[2]
+3319:  wmem    2755       0
+3322:   jmp    3348
+3324:  push  reg[0]
+3326:  push  reg[1]
+3328:  push  reg[2]
+3330:   set  reg[0]   27496
+3333:   set  reg[1]    1553
+3336:   add  reg[2]   11010    5751
+3340:  call    1480
+3342:   pop  reg[2]
+3344:   pop  reg[1]
+3346:   pop  reg[0]
+3348:   pop  reg[2]
+3350:   pop  reg[1]
+3352:   pop  reg[0]
+3354:   ret
+3355:  push  reg[0]
+3357:  push  reg[0]
+3359:  push  reg[1]
+3361:  push  reg[2]
+3363:   set  reg[0]   27546
+3366:   set  reg[1]    1553
+3369:   add  reg[2]     681     188
+3373:  call    1480
+3375:   pop  reg[2]
+3377:   pop  reg[1]
+3379:   pop  reg[0]
+3381:   pop  reg[0]
+3383:   ret
+3384:  push  reg[0]
+3386:  push  reg[2]
+3388:  push  reg[0]
+3390:  push  reg[1]
+3392:  push  reg[2]
+3394:   set  reg[0]   28051
+3397:   set  reg[1]    1553
+3400:   add  reg[2]      28    1227
+3404:  call    1480
+3406:   pop  reg[2]
+3408:   pop  reg[1]
+3410:   pop  reg[0]
+3412:   set  reg[2]       0
+3415:  call    5898
+3417:   pop  reg[2]
+3419:   pop  reg[0]
+3421:   ret
+3422:  push  reg[0]
+3424:  push  reg[1]
+3426:  push  reg[2]
+3428:  call    5943
+3430:    jf  reg[0]    3479
+3433:   add  reg[1]  reg[0]       2
+3437:  rmem  reg[0]  reg[1]
+3440:  rmem  reg[2]    2754
+3443:    eq  reg[2]  reg[0]  reg[2]
+3447:    jf  reg[2]    3479
+3450:  wmem  reg[1]       0
+3453:  push  reg[0]
+3455:  push  reg[1]
+3457:  push  reg[2]
+3459:   set  reg[0]   28068
+3462:   set  reg[1]    1553
+3465:   add  reg[2]     380     996
+3469:  call    1480
+3471:   pop  reg[2]
+3473:   pop  reg[1]
+3475:   pop  reg[0]
+3477:   jmp    3503
+3479:  push  reg[0]
+3481:  push  reg[1]
+3483:  push  reg[2]
+3485:   set  reg[0]   28076
+3488:   set  reg[1]    1553
+3491:   add  reg[2]    4508   20821
+3495:  call    1480
+3497:   pop  reg[2]
+3499:   pop  reg[1]
+3501:   pop  reg[0]
+3503:   pop  reg[2]
+3505:   pop  reg[1]
+3507:   pop  reg[0]
+3509:   ret
+3510:  push  reg[0]
+3512:  push  reg[1]
+3514:  call    5943
+3516:    jf  reg[0]    3561
+3519:   add  reg[1]  reg[0]       2
+3523:  rmem  reg[0]  reg[1]
+3526:    jt  reg[0]    3561
+3529:  rmem  reg[0]    2754
+3532:  wmem  reg[1]  reg[0]
+3535:  push  reg[0]
+3537:  push  reg[1]
+3539:  push  reg[2]
+3541:   set  reg[0]   28104
+3544:   set  reg[1]    1553
+3547:   add  reg[2]    3129    2100
+3551:  call    1480
+3553:   pop  reg[2]
+3555:   pop  reg[1]
+3557:   pop  reg[0]
+3559:   jmp    3585
+3561:  push  reg[0]
+3563:  push  reg[1]
+3565:  push  reg[2]
+3567:   set  reg[0]   28114
+3570:   set  reg[1]    1553
+3573:   add  reg[2]    6899     758
+3577:  call    1480
+3579:   pop  reg[2]
+3581:   pop  reg[1]
+3583:   pop  reg[0]
+3585:   pop  reg[1]
+3587:   pop  reg[0]
+3589:   ret
+3590:  push  reg[0]
+3592:  push  reg[1]
+3594:  call    5943
+3596:    jf  reg[0]    3623
+3599:   add  reg[1]  reg[0]       2
+3603:  rmem  reg[1]  reg[1]
+3606:    jt  reg[1]    3623
+3609:   add  reg[1]  reg[0]       3
+3613:  rmem  reg[1]  reg[1]
+3616:    jf  reg[1]    3649
+3619:  call  reg[1]
+3621:   jmp    3673
+3623:  push  reg[0]
+3625:  push  reg[1]
+3627:  push  reg[2]
+3629:   set  reg[0]   28149
+3632:   set  reg[1]    1553
+3635:   add  reg[2]     526      83
+3639:  call    1480
+3641:   pop  reg[2]
+3643:   pop  reg[1]
+3645:   pop  reg[0]
+3647:   jmp    3673
+3649:  push  reg[0]
+3651:  push  reg[1]
+3653:  push  reg[2]
+3655:   set  reg[0]   28184
+3658:   set  reg[1]    1553
+3661:   add  reg[2]    3367    5963
+3665:  call    1480
+3667:   pop  reg[2]
+3669:   pop  reg[1]
+3671:   pop  reg[0]
+3673:   pop  reg[1]
+3675:   pop  reg[0]
+3677:   ret
+3678:  push  reg[0]
+3680:  push  reg[1]
+3682:  push  reg[2]
+3684:   set  reg[0]    2702
+3687:  call    6012
+3689:    jt  reg[0]    3716
+3692:   add  reg[0]    2698       2
+3696:  wmem  reg[0]   32767
+3699:   add  reg[0]    2702       2
+3703:  wmem  reg[0]   32767
+3706:   add  reg[0]    2694       2
+3710:  wmem  reg[0]   32767
+3713:  wmem    2754    2670
+3716:   pop  reg[2]
+3718:   pop  reg[1]
+3720:   pop  reg[0]
+3722:   ret
+3723:  push  reg[0]
+3725:  push  reg[1]
+3727:  push  reg[2]
+3729:   set  reg[0]   28218
+3732:   set  reg[1]    1553
+3735:   add  reg[2]   14633   15953
+3739:  call    1480
+3741:   pop  reg[2]
+3743:   pop  reg[1]
+3745:   pop  reg[0]
+3747:  halt
+3748:  halt
+3749:  push  reg[1]
+3751:  rmem  reg[1]    3748
+3754:    or  reg[1]  reg[1]  reg[0]
+3758:  wmem    3748  reg[1]
+3761:   pop  reg[1]
+3763:   ret
+3764:  wmem    3748       0
+3767:   ret
+3768:  push  reg[0]
+3770:   set  reg[0]       1
+3773:  call    3749
+3775:   pop  reg[0]
+3777:   ret
+3778:  push  reg[0]
+3780:   set  reg[0]       2
+3783:  call    3749
+3785:   pop  reg[0]
+3787:   ret
+3788:  push  reg[0]
+3790:   set  reg[0]       4
+3793:  call    3749
+3795:   pop  reg[0]
+3797:   ret
+3798:  push  reg[0]
+3800:   set  reg[0]       8
+3803:  call    3749
+3805:   pop  reg[0]
+3807:   ret
+3808:  push  reg[0]
+3810:   set  reg[0]      16
+3813:  call    3749
+3815:   pop  reg[0]
+3817:   ret
+3818:  push  reg[0]
+3820:   set  reg[0]      32
+3823:  call    3749
+3825:   pop  reg[0]
+3827:   ret
+3828:  push  reg[0]
+3830:  push  reg[1]
+3832:  push  reg[2]
+3834:  push  reg[3]
+3836:   set  reg[0]      64
+3839:  call    3749
+3841:  push  reg[0]
+3843:  push  reg[1]
+3845:  push  reg[2]
+3847:   set  reg[0]   28250
+3850:   set  reg[1]    1553
+3853:   add  reg[2]    7662   19058
+3857:  call    1480
+3859:   pop  reg[2]
+3861:   pop  reg[1]
+3863:   pop  reg[0]
+3865:  rmem  reg[0]    3748
+3868:   set  reg[1]   25880
+3871:   set  reg[2]   32767
+3874:   set  reg[3]   28313
+3877:  call    1863
+3879:  push  reg[0]
+3881:  push  reg[1]
+3883:  push  reg[2]
+3885:   set  reg[0]   28317
+3888:   set  reg[1]    1553
+3891:   add  reg[2]   12862      39
+3895:  call    1480
+3897:   pop  reg[2]
+3899:   pop  reg[1]
+3901:   pop  reg[0]
+3903:  wmem    2754    2439
+3906:   pop  reg[3]
+3908:   pop  reg[2]
+3910:   pop  reg[1]
+3912:   pop  reg[0]
+3914:   ret
+3915:  push  reg[0]
+3917:  push  reg[1]
+3919:  rmem  reg[0]    2484
+3922:  rmem  reg[1]   27115
+3925:    eq  reg[0]  reg[0]  reg[1]
+3929:    jt  reg[0]    3962
+3932:  push  reg[0]
+3934:  push  reg[1]
+3936:  push  reg[2]
+3938:   set  reg[0]   28361
+3941:   set  reg[1]    1553
+3944:   add  reg[2]    2737   22709
+3948:  call    1480
+3950:   pop  reg[2]
+3952:   pop  reg[1]
+3954:   pop  reg[0]
+3956:  wmem    2754    2479
+3959:  wmem    2755    2479
+3962:   pop  reg[1]
+3964:   pop  reg[0]
+3966:   ret
+3973:  halt
+3975:  halt
+3976:  halt
+3977:  halt
+3978:  halt
+3979:  halt
+3980:  push  reg[0]
+3982:  push  reg[1]
+3984:   set  reg[0]       2
+3987:   set  reg[1]       0
+3990:  call    4240
+3992:   pop  reg[1]
+3994:   pop  reg[0]
+3996:   ret
+3997:  push  reg[0]
+3999:  push  reg[1]
+4001:   set  reg[0]       8
+4004:   set  reg[1]       1
+4007:  call    4301
+4009:   pop  reg[1]
+4011:   pop  reg[0]
+4013:   ret
+4014:  push  reg[0]
+4016:  push  reg[1]
+4018:   set  reg[0]       1
+4021:   set  reg[1]       2
+4024:  call    4240
+4026:   pop  reg[1]
+4028:   pop  reg[0]
+4030:   ret
+4031:  push  reg[0]
+4033:  push  reg[1]
+4035:   set  reg[0]       1
+4038:   set  reg[1]       3
+4041:  call    4301
+4043:  call    4555
+4045:   pop  reg[1]
+4047:   pop  reg[0]
+4049:   ret
+4050:  push  reg[0]
+4052:  push  reg[1]
+4054:   set  reg[0]       4
+4057:   set  reg[1]       4
+4060:  call    4301
+4062:   pop  reg[1]
+4064:   pop  reg[0]
+4066:   ret
+4067:  push  reg[0]
+4069:  push  reg[1]
+4071:   set  reg[0]       2
+4074:   set  reg[1]       5
+4077:  call    4240
+4079:   pop  reg[1]
+4081:   pop  reg[0]
+4083:   ret
+4084:  push  reg[0]
+4086:  push  reg[1]
+4088:   set  reg[0]      11
+4091:   set  reg[1]       6
+4094:  call    4301
+4096:   pop  reg[1]
+4098:   pop  reg[0]
+4100:   ret
+4101:  push  reg[0]
+4103:  push  reg[1]
+4105:   set  reg[0]       2
+4108:   set  reg[1]       7
+4111:  call    4240
+4113:   pop  reg[1]
+4115:   pop  reg[0]
+4117:   ret
+4118:  push  reg[0]
+4120:  push  reg[1]
+4122:   set  reg[0]       0
+4125:   set  reg[1]       8
+4128:  call    4240
+4130:   pop  reg[1]
+4132:   pop  reg[0]
+4134:   ret
+4135:  push  reg[0]
+4137:  push  reg[1]
+4139:   set  reg[0]       4
+4142:   set  reg[1]       9
+4145:  call    4301
+4147:   pop  reg[1]
+4149:   pop  reg[0]
+4151:   ret
+4152:  push  reg[0]
+4154:  push  reg[1]
+4156:   set  reg[0]       1
+4159:   set  reg[1]      10
+4162:  call    4240
+4164:   pop  reg[1]
+4166:   pop  reg[0]
+4168:   ret
+4169:  push  reg[0]
+4171:  push  reg[1]
+4173:   set  reg[0]      18
+4176:   set  reg[1]      11
+4179:  call    4301
+4181:   pop  reg[1]
+4183:   pop  reg[0]
+4185:   ret
+4186:  call    4633
+4188:   ret
+4189:  push  reg[0]
+4191:  push  reg[1]
+4193:   set  reg[0]       1
+4196:   set  reg[1]      12
+4199:  call    4240
+4201:   pop  reg[1]
+4203:   pop  reg[0]
+4205:   ret
+4206:  push  reg[0]
+4208:  push  reg[1]
+4210:   set  reg[0]       9
+4213:   set  reg[1]      13
+4216:  call    4301
+4218:   pop  reg[1]
+4220:   pop  reg[0]
+4222:   ret
+4223:  push  reg[0]
+4225:  push  reg[1]
+4227:   set  reg[0]       2
+4230:   set  reg[1]      14
+4233:  call    4240
+4235:   pop  reg[1]
+4237:   pop  reg[0]
+4239:   ret
+4240:  push  reg[0]
+4242:  push  reg[1]
+4244:  push  reg[2]
+4246:   add  reg[2]    2738       2
+4250:  rmem  reg[2]  reg[2]
+4253:    jt  reg[2]    4294
+4256:  call    4427
+4258:  wmem    3973  reg[0]
+4261:   add  reg[1]  reg[0]    3967
+4265:  rmem  reg[1]  reg[1]
+4268:   set  reg[0]   26038
+4271:  call    1540
+4273:   set  reg[0]  reg[1]
+4276:  call    1540
+4278:   set  reg[0]   26102
+4281:  call    1540
+4283:   set  reg[0]  reg[1]
+4286:  call    1540
+4288:   out       .
+4290:   out      \n
+4292:   out      \n
+4294:   pop  reg[2]
+4296:   pop  reg[1]
+4298:   pop  reg[0]
+4300:   ret
+4301:  push  reg[0]
+4303:  push  reg[1]
+4305:  push  reg[2]
+4307:   add  reg[2]    2738       2
+4311:  rmem  reg[2]  reg[2]
+4314:    jt  reg[2]    4420
+4317:  call    4427
+4319:  push  reg[0]
+4321:  rmem  reg[0]    3973
+4324:   add  reg[1]  reg[0]    3967
+4328:  rmem  reg[1]  reg[1]
+4331:   set  reg[0]   26136
+4334:  call    1540
+4336:   set  reg[0]  reg[1]
+4339:  call    1540
+4341:   set  reg[0]   26184
+4344:  call    1540
+4346:   pop  reg[0]
+4348:   set  reg[1]  reg[0]
+4351:  rmem  reg[0]    3974
+4354:  rmem  reg[2]    3973
+4357:   add  reg[2]  reg[2]    3970
+4361:  rmem  reg[2]  reg[2]
+4364:  call  reg[2]
+4366:    jt  reg[1]    4413
+4369:  rmem  reg[1]    3974
+4372:  wmem    3974  reg[0]
+4375:    gt  reg[2]  reg[0]  reg[1]
+4379:    jf  reg[2]    4391
+4382:  push  reg[0]
+4384:   set  reg[0]   26249
+4387:  call    1540
+4389:   pop  reg[0]
+4391:    gt  reg[2]  reg[1]  reg[0]
+4395:    jf  reg[2]    4407
+4398:  push  reg[0]
+4400:   set  reg[0]   26281
+4403:  call    1540
+4405:   pop  reg[0]
+4407:   out      \n
+4409:   out      \n
+4411:   jmp    4420
+4413:  call    4682
+4415:   set  reg[0]   26313
+4418:  call    1540
+4420:   pop  reg[2]
+4422:   pop  reg[1]
+4424:   pop  reg[0]
+4426:   ret
+4427:  push  reg[0]
+4429:  push  reg[1]
+4431:  push  reg[2]
+4433:  push  reg[3]
+4435:  push  reg[4]
+4437:  push  reg[5]
+4439:  rmem  reg[5]    3975
+4442:    gt  reg[3]  reg[5]   29999
+4446:    jt  reg[3]    4456
+4449:   add  reg[5]  reg[5]       1
+4453:  wmem    3975  reg[5]
+4456:   set  reg[3]  reg[0]
+4459:   set  reg[4]  reg[1]
+4462:   add  reg[0]  reg[5]       2
+4466:  call    2303
+4468:  rmem  reg[1]    3976
+4471:    or  reg[0]  reg[1]  reg[0]
+4475:   set  reg[1]  reg[4]
+4478:  call    2270
+4480:  wmem    3976  reg[0]
+4483:   set  reg[0]    3977
+4486:   add  reg[1]  reg[5]       2
+4490:   set  reg[2]  reg[4]
+4493:  call    4537
+4495:   set  reg[0]    3978
+4498:  mult  reg[1]  reg[5]  reg[5]
+4502:  mult  reg[2]  reg[4]  reg[4]
+4506:  call    4537
+4508:   set  reg[0]    3979
+4511:   set  reg[1]      13
+4514:  mult  reg[2]  reg[3]       9
+4518:  mult  reg[2]  reg[2]  reg[2]
+4522:  call    4537
+4524:   pop  reg[5]
+4526:   pop  reg[4]
+4528:   pop  reg[3]
+4530:   pop  reg[2]
+4532:   pop  reg[1]
+4534:   pop  reg[0]
+4536:   ret
+4537:  push  reg[0]
+4539:  rmem  reg[0]  reg[0]
+4542:  call    2270
+4544:   set  reg[1]  reg[2]
+4547:  call    2147
+4549:   pop  reg[1]
+4551:  wmem  reg[1]  reg[0]
+4554:   ret
+4555:  push  reg[0]
+4557:   add  reg[0]    2738       2
+4561:  rmem  reg[0]  reg[0]
+4564:    jt  reg[0]    4630
+4567:   set  reg[0]   26335
+4570:  call    1540
+4572:  rmem  reg[0]    3974
+4575:    eq  reg[0]  reg[0]      30
+4579:    jt  reg[0]    4596
+4582:   set  reg[0]   26368
+4585:  call    1540
+4587:   set  reg[0]   26412
+4590:  call    1540
+4592:  call    4682
+4594:   jmp    4630
+4596:   set  reg[0]   26454
+4599:  call    1540
+4601:  rmem  reg[0]    3976
+4604:   add  reg[0]  reg[0]       1
+4608:    jt  reg[0]    4618
+4611:   set  reg[0]   26498
+4614:  call    1540
+4616:   jmp    4587
+4618:   set  reg[0]   26598
+4621:  call    1540
+4623:   add  reg[0]    2738       2
+4627:  wmem  reg[0]   32767
+4630:   pop  reg[0]
+4632:   ret
+4633:  push  reg[0]
+4635:   add  reg[0]    2738       2
+4639:  rmem  reg[0]  reg[0]
+4642:    jt  reg[0]    4679
+4645:   set  reg[0]   26731
+4648:  call    1540
+4650:  rmem  reg[0]    2754
+4653:    eq  reg[0]  reg[0]    2645
+4657:    jt  reg[0]    4667
+4660:   set  reg[0]   26739
+4663:  call    1540
+4665:   jmp    4672
+4667:   set  reg[0]   26745
+4670:  call    1540
+4672:   set  reg[0]   26751
+4675:  call    1540
+4677:  call    4682
+4679:   pop  reg[0]
+4681:   ret
+4682:  push  reg[0]
+4684:  wmem    3974      22
+4687:  wmem    3975       0
+4690:  wmem    3976       0
+4693:  wmem    3977       0
+4696:  wmem    3978       0
+4699:  wmem    3979       0
+4702:   add  reg[0]    2738       2
+4706:  wmem  reg[0]    2645
+4709:   pop  reg[0]
+4711:   ret
+4712:  push  reg[0]
+4714:   add  reg[0]    2738       2
+4718:  rmem  reg[0]  reg[0]
+4721:    eq  reg[0]  reg[0]   32767
+4725:    jt  reg[0]    4739
+4728:   set  reg[0]   26838
+4731:  call    1540
+4733:  wmem    2754    2600
+4736:  wmem    2755    2600
+4739:   pop  reg[0]
+4741:   ret
+4742:  push  reg[0]
+4744:  push  reg[1]
+4746:  push  reg[2]
+4748:  push  reg[3]
+4750:  push  reg[0]
+4752:  push  reg[1]
+4754:  push  reg[2]
+4756:   set  reg[0]   28383
+4759:   set  reg[1]    1553
+4762:   add  reg[2]    4072   25103
+4766:  call    1480
+4768:   pop  reg[2]
+4770:   pop  reg[1]
+4772:   pop  reg[0]
+4774:   set  reg[0]    4242
+4777:   set  reg[1]   25880
+4780:   set  reg[2]   32767
+4783:   set  reg[3]   28411
+4786:  call    1863
+4788:  push  reg[0]
+4790:  push  reg[1]
+4792:  push  reg[2]
+4794:   set  reg[0]   28415
+4797:   set  reg[1]    1553
+4800:   add  reg[2]    9840    9847
+4804:  call    1480
+4806:   pop  reg[2]
+4808:   pop  reg[1]
+4810:   pop  reg[0]
+4812:   pop  reg[3]
+4814:   pop  reg[2]
+4816:   pop  reg[1]
+4818:   pop  reg[0]
+4820:   ret
+4821:  push  reg[0]
+4823:   add  reg[0]    2694       2
+4827:  rmem  reg[0]  reg[0]
+4830:    jt  reg[0]    4880
+4833:   add  reg[0]    2706       2
+4837:  wmem  reg[0]   32767
+4840:   add  reg[0]    2694       2
+4844:  wmem  reg[0]   32767
+4847:   add  reg[0]    2698       2
+4851:  wmem  reg[0]       0
+4854:  push  reg[0]
+4856:  push  reg[1]
+4858:  push  reg[2]
+4860:   set  reg[0]   28467
+4863:   set  reg[1]    1553
+4866:   add  reg[2]   28391    3091
+4870:  call    1480
+4872:   pop  reg[2]
+4874:   pop  reg[1]
+4876:   pop  reg[0]
+4878:   jmp    4904
+4880:  push  reg[0]
+4882:  push  reg[1]
+4884:  push  reg[2]
+4886:   set  reg[0]   28524
+4889:   set  reg[1]    1553
+4892:   add  reg[2]    5367   25601
+4896:  call    1480
+4898:   pop  reg[2]
+4900:   pop  reg[1]
+4902:   pop  reg[0]
+4904:   pop  reg[0]
+4906:   ret
+4907:  push  reg[0]
+4909:   add  reg[0]    2698       2
+4913:  wmem  reg[0]   32767
+4916:   add  reg[0]    2702       2
+4920:  wmem  reg[0]       0
+4923:  push  reg[0]
+4925:  push  reg[1]
+4927:  push  reg[2]
+4929:   set  reg[0]   28583
+4932:   set  reg[1]    1553
+4935:   add  reg[2]   18336    7637
+4939:  call    1480
+4941:   pop  reg[2]
+4943:   pop  reg[1]
+4945:   pop  reg[0]
+4947:  wmem    2755       0
+4950:   pop  reg[0]
+4952:   ret
+4953:  push  reg[0]
+4955:   add  reg[0]    2698       2
+4959:  wmem  reg[0]       0
+4962:   add  reg[0]    2702       2
+4966:  wmem  reg[0]   32767
+4969:  push  reg[0]
+4971:  push  reg[1]
+4973:  push  reg[2]
+4975:   set  reg[0]   28609
+4978:   set  reg[1]    1553
+4981:   add  reg[2]   16973    1834
+4985:  call    1480
+4987:   pop  reg[2]
+4989:   pop  reg[1]
+4991:   pop  reg[0]
+4993:  wmem    2755       0
+4996:   pop  reg[0]
+4998:   ret
+4999:  push  reg[2]
+5001:  push  reg[3]
+5003:  rmem  reg[2]    2754
+5006:    eq  reg[2]  reg[2]    2479
+5010:    jt  reg[2]    5039
+5013:  push  reg[0]
+5015:  push  reg[1]
+5017:  push  reg[2]
+5019:   set  reg[0]   28635
+5022:   set  reg[1]    1553
+5025:   add  reg[2]    4963   14461
+5029:  call    1480
+5031:   pop  reg[2]
+5033:   pop  reg[1]
+5035:   pop  reg[0]
+5037:   jmp    5358
+5039:   add  reg[2]  reg[0]       2
+5043:  wmem  reg[2]   32767
+5046:  rmem  reg[2]    2484
+5049:   add  reg[2]  reg[2]   27109
+5053:   add  reg[2]  reg[2]       1
+5057:  rmem  reg[2]  reg[2]
+5060:   add  reg[3]    2479       1
+5064:  rmem  reg[3]  reg[3]
+5067:   add  reg[3]  reg[3]  reg[2]
+5071:   add  reg[2]  reg[1]      48
+5075:  wmem  reg[3]  reg[2]
+5078:  rmem  reg[2]    2484
+5081:   add  reg[2]  reg[2]   27115
+5085:   add  reg[2]  reg[2]       1
+5089:  wmem  reg[2]  reg[1]
+5092:  push  reg[0]
+5094:  push  reg[0]
+5096:  push  reg[1]
+5098:  push  reg[2]
+5100:   set  reg[0]   28678
+5103:   set  reg[1]    1553
+5106:   add  reg[2]   14248    6463
+5110:  call    1480
+5112:   pop  reg[2]
+5114:   pop  reg[1]
+5116:   pop  reg[0]
+5118:   pop  reg[0]
+5120:  push  reg[0]
+5122:   add  reg[2]  reg[0]       0
+5126:  rmem  reg[0]  reg[2]
+5129:  call    1540
+5131:   pop  reg[0]
+5133:  push  reg[0]
+5135:  push  reg[0]
+5137:  push  reg[1]
+5139:  push  reg[2]
+5141:   set  reg[0]   28693
+5144:   set  reg[1]    1553
+5147:   add  reg[2]     348     154
+5151:  call    1480
+5153:   pop  reg[2]
+5155:   pop  reg[1]
+5157:   pop  reg[0]
+5159:   pop  reg[0]
+5161:  rmem  reg[2]    2484
+5164:   add  reg[2]  reg[2]       1
+5168:  wmem    2484  reg[2]
+5171:  rmem  reg[3]   27115
+5174:    eq  reg[3]  reg[2]  reg[3]
+5178:    jf  reg[3]    5358
+5181:   set  reg[0]       0
+5184:   add  reg[1]   27115       1
+5188:  rmem  reg[1]  reg[1]
+5191:   add  reg[0]  reg[0]  reg[1]
+5195:   add  reg[1]   27115       2
+5199:  rmem  reg[1]  reg[1]
+5202:   add  reg[2]   27115       3
+5206:  rmem  reg[2]  reg[2]
+5209:  mult  reg[2]  reg[2]  reg[2]
+5213:  mult  reg[1]  reg[1]  reg[2]
+5217:   add  reg[0]  reg[0]  reg[1]
+5221:   add  reg[1]   27115       4
+5225:  rmem  reg[1]  reg[1]
+5228:  mult  reg[2]  reg[1]  reg[1]
+5232:  mult  reg[2]  reg[2]  reg[1]
+5236:   add  reg[0]  reg[0]  reg[2]
+5240:   add  reg[1]   27115       5
+5244:  rmem  reg[1]  reg[1]
+5247:  mult  reg[1]  reg[1]   32767
+5251:   add  reg[0]  reg[0]  reg[1]
+5255:    eq  reg[1]  reg[0]     399
+5259:    jt  reg[1]    5334
+5262:   add  reg[2]    2710       2
+5266:  wmem  reg[2]    2479
+5269:   add  reg[2]    2714       2
+5273:  wmem  reg[2]    2479
+5276:   add  reg[2]    2718       2
+5280:  wmem  reg[2]    2479
+5283:   add  reg[2]    2722       2
+5287:  wmem  reg[2]    2479
+5290:   add  reg[2]    2726       2
+5294:  wmem  reg[2]    2479
+5297:  wmem    2484       0
+5300:   set  reg[0]   27109
+5303:   set  reg[1]    5363
+5306:  call    1480
+5308:  push  reg[0]
+5310:  push  reg[1]
+5312:  push  reg[2]
+5314:   set  reg[0]   28724
+5317:   set  reg[1]    1553
+5320:   add  reg[2]   29348    1605
+5324:  call    1480
+5326:   pop  reg[2]
+5328:   pop  reg[1]
+5330:   pop  reg[0]
+5332:   jmp    5358
+5334:  push  reg[0]
+5336:  push  reg[1]
+5338:  push  reg[2]
+5340:   set  reg[0]   28791
+5343:   set  reg[1]    1553
+5346:   add  reg[2]      72     162
+5350:  call    1480
+5352:   pop  reg[2]
+5354:   pop  reg[1]
+5356:   pop  reg[0]
+5358:   pop  reg[3]
+5360:   pop  reg[2]
+5362:   ret
+5363:  push  reg[2]
+5365:   add  reg[2]    2479       1
+5369:  rmem  reg[2]  reg[2]
+5372:   add  reg[2]  reg[2]  reg[0]
+5376:  wmem  reg[2]      95
+5379:   pop  reg[2]
+5381:   ret
+5382:  push  reg[0]
+5384:  push  reg[1]
+5386:   set  reg[0]    2710
+5389:   set  reg[1]       2
+5392:  call    4999
+5394:   pop  reg[1]
+5396:   pop  reg[0]
+5398:   ret
+5399:  push  reg[0]
+5401:  push  reg[1]
+5403:   set  reg[0]    2714
+5406:   set  reg[1]       3
+5409:  call    4999
+5411:   pop  reg[1]
+5413:   pop  reg[0]
+5415:   ret
+5416:  push  reg[0]
+5418:  push  reg[1]
+5420:   set  reg[0]    2718
+5423:   set  reg[1]       5
+5426:  call    4999
+5428:   pop  reg[1]
+5430:   pop  reg[0]
+5432:   ret
+5433:  push  reg[0]
+5435:  push  reg[1]
+5437:   set  reg[0]    2722
+5440:   set  reg[1]       7
+5443:  call    4999
+5445:   pop  reg[1]
+5447:   pop  reg[0]
+5449:   ret
+5450:  push  reg[0]
+5452:  push  reg[1]
+5454:   set  reg[0]    2726
+5457:   set  reg[1]       9
+5460:  call    4999
+5462:   pop  reg[1]
+5464:   pop  reg[0]
+5466:   ret
+5467:  push  reg[0]
+5469:  push  reg[1]
+5471:  push  reg[2]
+5473:    jf  reg[7]    5627
+5476:  push  reg[0]
+5478:  push  reg[1]
+5480:  push  reg[2]
+5482:   set  reg[0]   28858
+5485:   set  reg[1]    1553
+5488:   add  reg[2]   16357       3
+5492:  call    1480
+5494:   pop  reg[2]
+5496:   pop  reg[1]
+5498:   pop  reg[0]
+5500:  noop
+5501:  noop
+5502:  noop
+5503:  noop
+5504:  noop
+5505:   set  reg[0]       4
+5508:   set  reg[1]       1
+5511:  call    6049
+5513:    eq  reg[1]  reg[0]       6
+5517:    jf  reg[1]    5601
+5520:  push  reg[0]
+5522:  push  reg[1]
+5524:  push  reg[2]
+5526:   set  reg[0]   29027
+5529:   set  reg[1]    1553
+5532:   add  reg[2]    8051   14968
+5536:  call    1480
+5538:   pop  reg[2]
+5540:   pop  reg[1]
+5542:   pop  reg[0]
+5544:   set  reg[0]  reg[7]
+5547:   set  reg[1]   25880
+5550:   set  reg[2]   32767
+5553:  push  reg[3]
+5555:   set  reg[3]   29254
+5558:  call    1863
+5560:   pop  reg[3]
+5562:  push  reg[0]
+5564:  push  reg[1]
+5566:  push  reg[2]
+5568:   set  reg[0]   29258
+5571:   set  reg[1]    1553
+5574:   add  reg[2]     202   29735
+5578:  call    1480
+5580:   pop  reg[2]
+5582:   pop  reg[1]
+5584:   pop  reg[0]
+5586:  wmem    2754    2520
+5589:  wmem    2755       0
+5592:   add  reg[1]    2730       2
+5596:  wmem  reg[1]   32767
+5599:   jmp    5736
+5601:  push  reg[0]
+5603:  push  reg[1]
+5605:  push  reg[2]
+5607:   set  reg[0]   29307
+5610:   set  reg[1]    1553
+5613:   add  reg[2]     426   12103
+5617:  call    1480
+5619:   pop  reg[2]
+5621:   pop  reg[1]
+5623:   pop  reg[0]
+5625:   jmp    5736
+5627:  push  reg[0]
+5629:  push  reg[1]
+5631:  push  reg[2]
+5633:   set  reg[0]   29452
+5636:   set  reg[1]    1553
+5639:   add  reg[2]    3485    2907
+5643:  call    1480
+5645:   pop  reg[2]
+5647:   pop  reg[1]
+5649:   pop  reg[0]
+5651:   set  reg[0]       0
+5654:   add  reg[2]       1   27115
+5658:  rmem  reg[1]  reg[2]
+5661:   add  reg[0]  reg[0]  reg[1]
+5665:  mult  reg[0]  reg[0]   31660
+5669:  call    2147
+5671:  rmem  reg[1]   27115
+5674:   add  reg[1]  reg[1]   27115
+5678:   add  reg[2]  reg[2]       1
+5682:    gt  reg[1]  reg[2]  reg[1]
+5686:    jf  reg[1]    5658
+5689:   set  reg[1]   25880
+5692:   set  reg[2]   32767
+5695:  push  reg[3]
+5697:   set  reg[3]   29570
+5700:  call    1863
+5702:   pop  reg[3]
+5704:  push  reg[0]
+5706:  push  reg[1]
+5708:  push  reg[2]
+5710:   set  reg[0]   29574
+5713:   set  reg[1]    1553
+5716:   add  reg[2]      74    2852
+5720:  call    1480
+5722:   pop  reg[2]
+5724:   pop  reg[1]
+5726:   pop  reg[0]
+5728:  wmem    2754    2510
+5731:  wmem    2755       0
+5734:   jmp    5736
+5736:   pop  reg[2]
+5738:   pop  reg[1]
+5740:   pop  reg[0]
+5742:   ret
+5743:  push  reg[0]
+5745:  push  reg[1]
+5747:  push  reg[2]
+5749:  push  reg[3]
+5751:  push  reg[0]
+5753:  push  reg[1]
+5755:  push  reg[2]
+5757:   set  reg[0]   29664
+5760:   set  reg[1]    1553
+5763:   add  reg[2]   11087     546
+5767:  call    1480
+5769:   pop  reg[2]
+5771:   pop  reg[1]
+5773:   pop  reg[0]
+5775:  rmem  reg[0]    3977
+5778:  rmem  reg[1]    3978
+5781:  call    2147
+5783:  rmem  reg[1]    3979
+5786:  call    2147
+5788:   set  reg[1]   25933
+5791:   set  reg[2]       4
+5794:  push  reg[3]
+5796:   set  reg[3]   29849
+5799:  call    1863
+5801:   pop  reg[3]
+5803:  push  reg[0]
+5805:  push  reg[1]
+5807:  push  reg[2]
+5809:   set  reg[0]   29853
+5812:   set  reg[1]    1553
+5815:   add  reg[2]     601    2078
+5819:  call    1480
+5821:   pop  reg[2]
+5823:   pop  reg[1]
+5825:   pop  reg[0]
+5827:   pop  reg[3]
+5829:   pop  reg[2]
+5831:   pop  reg[1]
+5833:   pop  reg[0]
+5835:   ret
+5836:   out       -
+5838:   out        
+5840:  call    1540
+5842:   out      \n
+5844:   ret
+5845:  push  reg[1]
+5847:  push  reg[2]
+5849:   set  reg[0]   27395
+5852:   set  reg[1]    5868
+5855:   set  reg[2]       0
+5858:  call    1480
+5860:   set  reg[0]  reg[2]
+5863:   pop  reg[2]
+5865:   pop  reg[1]
+5867:   ret
+5868:  push  reg[3]
+5870:  push  reg[4]
+5872:  rmem  reg[3]    2754
+5875:   add  reg[4]  reg[0]       2
+5879:  rmem  reg[4]  reg[4]
+5882:    eq  reg[3]  reg[3]  reg[4]
+5886:    jf  reg[3]    5893
+5889:   add  reg[2]  reg[2]       1
+5893:   pop  reg[4]
+5895:   pop  reg[3]
+5897:   ret
+5898:  push  reg[0]
+5900:  push  reg[1]
+5902:   set  reg[0]   27395
+5905:   set  reg[1]    5915
+5908:  call    1480
+5910:   pop  reg[1]
+5912:   pop  reg[0]
+5914:   ret
+5915:  push  reg[3]
+5917:   add  reg[3]  reg[0]       2
+5921:  rmem  reg[3]  reg[3]
+5924:    eq  reg[3]  reg[2]  reg[3]
+5928:    jf  reg[3]    5940
+5931:   add  reg[0]  reg[0]       0
+5935:  rmem  reg[0]  reg[0]
+5938:  call    5836
+5940:   pop  reg[3]
+5942:   ret
+5943:  push  reg[1]
+5945:  push  reg[2]
+5947:   set  reg[2]  reg[0]
+5950:   set  reg[0]   27395
+5953:   set  reg[1]    5986
+5956:  call    1565
+5958:    eq  reg[1]  reg[0]   32767
+5962:    jt  reg[1]    5978
+5965:   add  reg[1]   27395  reg[0]
+5969:   add  reg[1]  reg[1]       1
+5973:  rmem  reg[0]  reg[1]
+5976:   jmp    5981
+5978:   set  reg[0]       0
+5981:   pop  reg[2]
+5983:   pop  reg[1]
+5985:   ret
+5986:  push  reg[1]
+5988:   set  reg[1]  reg[2]
+5991:   add  reg[0]  reg[0]       0
+5995:  rmem  reg[0]  reg[0]
+5998:  call    1689
+6000:   pop  reg[1]
+6002:    jf  reg[0]    6011
+6005:   set  reg[2]  reg[1]
+6008:   set  reg[1]   32767
+6011:   ret
+6012:  push  reg[1]
+6014:  push  reg[2]
+6016:   add  reg[0]  reg[0]       2
+6020:  rmem  reg[0]  reg[0]
+6023:    jf  reg[0]    6041
+6026:  rmem  reg[1]    2754
+6029:    eq  reg[1]  reg[0]  reg[1]
+6033:    jt  reg[1]    6041
+6036:   set  reg[0]       0
+6039:   jmp    6044
+6041:   set  reg[0]       1
+6044:   pop  reg[2]
+6046:   pop  reg[1]
+6048:   ret
+6049:    jt  reg[0]    6057
+6052:   add  reg[0]  reg[1]       1
+6056:   ret
+6057:    jt  reg[1]    6070
+6060:   add  reg[0]  reg[0]   32767
+6064:   set  reg[1]  reg[7]
+6067:  call    6049
+6069:   ret
+6070:  push  reg[0]
+6072:   add  reg[1]  reg[1]   32767
+6076:  call    6049
+6078:   set  reg[1]  reg[0]
+6081:   pop  reg[0]
+6083:   add  reg[0]  reg[0]   32767
+6087:  call    6049
+6089:   ret
+7047:  call   14644
+8175:   set   16445     475
+9337:   not   19230    4648
+10573:  not   21168   10068
+11161:   jf   22917   12029
+12106: wmem   24264   16316
+12602:  out       抬
+20166: noop
+20298: wmem    7873   16289
+21607:  add   11060   21028   31452
+22195:  add   12204   23240    2141
+23431:   or   14705   28197   10079
+26879: halt
+27672:  ret

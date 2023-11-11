@@ -24,12 +24,4 @@ public partial class Vm
             _state.InputBuffer.Enqueue(item: NewLine);
         }
     }
-
-    public void BufferCommands(IEnumerable<string> commands)
-    {
-        foreach (var command in commands)
-        {
-            BufferCommand(command);
-        }
-    }
 }

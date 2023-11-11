@@ -7,10 +7,11 @@ public partial class Vm
 {
     private const ushort MemSize = 32768;
     private const ushort NumReg = 8;
-    private const ushort MinReg = MemSize;
-    private const ushort MaxReg = MinReg + NumReg - 1;
     private const ushort Modulus = 32768;
     private const ushort BitMask15 = 32767;
+    
+    public const ushort MinReg = MemSize;
+    public const ushort MaxReg = MinReg + NumReg - 1;
     
     private readonly State _state;
     private readonly Dictionary<Opcode, Operation> _vectors;
