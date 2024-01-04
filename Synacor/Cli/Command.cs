@@ -2,18 +2,10 @@ namespace Synacor.Cli;
 
 public delegate void CommandHandler(string arg);
 
-public class Command
+public class Command(string name, string syntax, string desc, CommandHandler handler)
 {
-    public string Name { get; }
-    public string Syntax { get; }
-    public string Desc { get; }
-    public CommandHandler Handler { get; }
-
-    public Command(string name, string syntax, string desc, CommandHandler handler)
-    {
-        Name = name;
-        Syntax = syntax;
-        Desc = desc;
-        Handler = handler;
-    }
+    public string Name { get; } = name;
+    public string Syntax { get; } = syntax;
+    public string Desc { get; } = desc;
+    public CommandHandler Handler { get; } = handler;
 }

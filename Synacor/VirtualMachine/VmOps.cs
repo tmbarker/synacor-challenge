@@ -35,7 +35,7 @@ public partial class Vm
     
     private static Result Halt()
     {
-        return Result.halted;
+        return Result.Halted;
     }
 
     private Result Set()
@@ -44,13 +44,13 @@ public partial class Vm
         var b = ReadIpInterpreted();
 
         WriteVal(adr: a, val: b);
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Push()
     {
         _state.Stack.Push(item: ReadIpInterpreted());
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Pop()
@@ -64,7 +64,7 @@ public partial class Vm
         var b = _state.Stack.Pop();
 
         WriteVal(adr: a, val: b);
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Eq()
@@ -74,7 +74,7 @@ public partial class Vm
         var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)(b == c ? 1 : 0));
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Gt()
@@ -84,13 +84,13 @@ public partial class Vm
         var c = ReadIpInterpreted();
 
         WriteVal(adr: a, val: (ushort)(b > c ? 1 : 0));
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Jmp()
     {
         _state.Ip = ReadIpInterpreted();
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Jt()
@@ -103,7 +103,7 @@ public partial class Vm
             _state.Ip = b;
         }
         
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Jf()
@@ -116,7 +116,7 @@ public partial class Vm
             _state.Ip = b;
         }
         
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Add()
@@ -125,8 +125,8 @@ public partial class Vm
         var b = ReadIpInterpreted();
         var c = ReadIpInterpreted();
 
-        WriteVal(adr: a, val: (ushort)((b + c) % Modulus));
-        return Result.ok;
+        WriteVal(adr: a, val: (ushort)((b + c) % MODULUS));
+        return Result.Ok;
     }
     
     private Result Mult()
@@ -135,8 +135,8 @@ public partial class Vm
         var b = ReadIpInterpreted();
         var c = ReadIpInterpreted();
 
-        WriteVal(adr: a, val: (ushort)((b * c) % Modulus));
-        return Result.ok;
+        WriteVal(adr: a, val: (ushort)((b * c) % MODULUS));
+        return Result.Ok;
     }
     
     private Result Mod()
@@ -145,8 +145,8 @@ public partial class Vm
         var b = ReadIpInterpreted();
         var c = ReadIpInterpreted();
 
-        WriteVal(adr: a, val: (ushort)((b % c) % Modulus));
-        return Result.ok;
+        WriteVal(adr: a, val: (ushort)((b % c) % MODULUS));
+        return Result.Ok;
     }
     
     private Result And()
@@ -155,8 +155,8 @@ public partial class Vm
         var b = ReadIpInterpreted();
         var c = ReadIpInterpreted();
 
-        WriteVal(adr: a, val: (ushort)((b & c) % Modulus));
-        return Result.ok;
+        WriteVal(adr: a, val: (ushort)((b & c) % MODULUS));
+        return Result.Ok;
     }
     
     private Result Or()
@@ -165,8 +165,8 @@ public partial class Vm
         var b = ReadIpInterpreted();
         var c = ReadIpInterpreted();
 
-        WriteVal(adr: a, val: (ushort)((b | c) % Modulus));
-        return Result.ok;
+        WriteVal(adr: a, val: (ushort)((b | c) % MODULUS));
+        return Result.Ok;
     }
     
     private Result Not()
@@ -174,8 +174,8 @@ public partial class Vm
         var a = ReadIpLiteral();
         var b = ReadIpInterpreted();
 
-        WriteVal(adr: a, val: (ushort)((~b & BitMask15) % Modulus));
-        return Result.ok;
+        WriteVal(adr: a, val: (ushort)((~b & BIT_MASK_15) % MODULUS));
+        return Result.Ok;
     }
     
     private Result Rmem()
@@ -184,7 +184,7 @@ public partial class Vm
         var b = ReadIpInterpreted();
 
         WriteVal(adr: a, val: ReadMem(b));
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Wmem()
@@ -193,7 +193,7 @@ public partial class Vm
         var b = ReadIpInterpreted();
 
         WriteMem(adr: a, val: b);
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Call()
@@ -201,7 +201,7 @@ public partial class Vm
         var a = ReadIpInterpreted();
         _state.Stack.Push(_state.Ip);
         _state.Ip = a;
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Ret()
@@ -212,7 +212,7 @@ public partial class Vm
         }
 
         _state.Ip = _state.Stack.Pop();
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result Out()
@@ -221,7 +221,7 @@ public partial class Vm
         var @char = Convert.ToChar(instr);
 
         _state.OutputBuffer.Enqueue(@char);
-        return Result.ok;
+        return Result.Ok;
     }
     
     private Result In()
@@ -232,18 +232,18 @@ public partial class Vm
             //  the IP so that it points at the IN opcode again 
             //
             _state.Ip--;
-            return Result.awaitingInput;
+            return Result.AwaitingInput;
         }
 
         var a = ReadIpLiteral();
         var c = _state.InputBuffer.Dequeue();
 
         WriteVal(adr: a, val: c);
-        return Result.ok;
+        return Result.Ok;
     }
 
     private static Result Noop()
     {
-        return Result.ok;
+        return Result.Ok;
     }
 }

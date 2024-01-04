@@ -1,3 +1,4 @@
+using System.Runtime.Versioning;
 using System.Text.RegularExpressions;
 using Synacor.Utilities;
 using Synacor.VirtualMachine;
@@ -7,6 +8,7 @@ namespace Synacor.Cli;
 /// <summary>
 /// A shell for working with Synacor <see cref="Vm"/> instances
 /// </summary>
+[SupportedOSPlatform("windows")]
 public class Shell
 {
     private const string StartMessage = $"{nameof(Synacor)} {nameof(Shell)} started.";
@@ -138,6 +140,30 @@ public class Shell
             LogError(error: $"Unable to parse register and value [{arg}]");
         }
     }
+
+    private void SetBreakpoint(string arg)
+    {
+        try
+        {
+            _context.Vm.AddBreakpoint(adr: ushort.Parse(arg));
+        }
+        catch
+        {
+            LogError(error: $"Unable to parse IP [{arg}]");
+        }
+    }
+
+    private void ClearBreakpoint(string arg)
+    {
+        try
+        {
+            _context.Vm.ClearBreakpoint(adr: ushort.Parse(arg));
+        }
+        catch
+        {
+            LogError(error: $"Unable to parse IP [{arg}]");
+        }
+    }
     
     private static bool ParseInput(string input, out string cmd, out string arg)
     {
@@ -215,6 +241,16 @@ public class Shell
             desc: "set the instruction pointer to the specified value",
             handler: SetIp);
         yield return new Command(
+            name: "set-breakpoint",
+            syntax: "set-breakpoint [address]",
+            desc: "Set a breakpoint at the specified IP address",
+            handler: SetBreakpoint);
+        yield return new Command(
+            name: "clear-breakpoint",
+            syntax: "clear-breakpoint [address]",
+            desc: "Clear any breakpoint from the specified IP address",
+            handler: ClearBreakpoint);
+        yield return new Command(
             name: "get-state",
             syntax: "get-state",
             desc: "print the state of the VM registers, IP, stack, and buffers (but not the main memory)",
@@ -229,6 +265,11 @@ public class Shell
             syntax: "solve-coin",
             desc: "solve the coin puzzle and print the solution",
             handler: _ => LogInfo(info: CoinPuzzle.Solve()));
+        yield return new Command(
+            name: "solve-teleporter",
+            syntax: "solve-teleporter",
+            desc: "solve the teleporter puzzle and print the solution",
+            handler: _ => LogInfo(info: TeleporterPuzzle.Solve()));
         yield return new Command(
             name: "dsm",
             syntax: "dsm [path]",

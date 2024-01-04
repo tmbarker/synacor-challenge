@@ -4,9 +4,10 @@ public partial class Vm
 {
     public enum Result
     {
-        ok = 0,
-        halted,
-        awaitingInput
+        Ok = 0,
+        Halted,
+        AwaitingInput,
+        Breakpoint
     }
     
     public enum Opcode
@@ -40,6 +41,6 @@ public static class ResultExtensions
 {
     public static bool Ok(this Vm.Result result)
     {
-        return result is Vm.Result.ok;
+        return result is Vm.Result.Ok;
     }
 }

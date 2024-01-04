@@ -49,9 +49,6 @@ public static class BinaryUtil
         {
             program[i] = reader.ReadUInt16();
         }
-
-        stream.Dispose();
-        reader.Dispose();
         
         return program;
     }
@@ -87,9 +84,6 @@ public static class BinaryUtil
             writer.Write('\n');
             adr += n + 1;
         }
-        
-        writer.Dispose();
-        stream.Dispose();
     }
 
     private static string PadToLength(string str, int len, bool front)
@@ -113,9 +107,9 @@ public static class BinaryUtil
     {
         //  If the arg corresponds to a register show so explicitly
         //
-        if (val is >= Vm.MinReg and <= Vm.MaxReg)
+        if (val is >= Vm.MIN_REG and <= Vm.MAX_REG)
         {
-            return $"reg[{val - Vm.MinReg}]";
+            return $"reg[{val - Vm.MIN_REG}]";
         }
         
         //  If the opcode is @out, simply show the ascii char

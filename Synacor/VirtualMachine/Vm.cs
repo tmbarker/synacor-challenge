@@ -5,20 +5,20 @@ namespace Synacor.VirtualMachine;
 /// </summary>
 public partial class Vm
 {
-    private const ushort MemSize = 32768;
-    private const ushort NumReg = 8;
-    private const ushort Modulus = 32768;
-    private const ushort BitMask15 = 32767;
+    private const ushort MEM_SIZE = 32768;
+    private const ushort NUM_REG = 8;
+    private const ushort MODULUS = 32768;
+    private const ushort BIT_MASK_15 = 32767;
     
-    public const ushort MinReg = MemSize;
-    public const ushort MaxReg = MinReg + NumReg - 1;
+    public const ushort MIN_REG = MEM_SIZE;
+    public const ushort MAX_REG = MIN_REG + NUM_REG - 1;
     
     private readonly State _state;
     private readonly Dictionary<Opcode, Operation> _vectors;
     
     public Result Run()
     {
-        var status = Result.ok;
+        var status = Result.Ok;
         while (status.Ok())
         {
             status = Step();
@@ -27,8 +27,16 @@ public partial class Vm
         return status;
     }
 
-    public Result Step() => _vectors[ReadOpcode()].Invoke();
-    
+    public Result Step()
+    {
+        if (_breakpoints.Contains(_state.Ip))
+        {
+            return Result.Breakpoint;
+        }
+        
+        return _vectors[ReadOpcode()].Invoke();
+    }
+
     private Vm(State state)
     {
         _state = state;
@@ -74,7 +82,7 @@ public partial class Vm
 
     private static bool IsRegister(ushort adr)
     {
-        return adr is >= MinReg and <= MaxReg;
+        return adr is >= MIN_REG and <= MAX_REG;
     }
     
     private ushort ReadReg(ushort adr)
@@ -100,13 +108,13 @@ public partial class Vm
     private static int CheckedReg(ushort adr)
     {
         return IsRegister(adr)
-            ? adr - MinReg
+            ? adr - MIN_REG
             : throw new InvalidRegisterException(adr);
     }
     
     private static int CheckedAdr(ushort adr)
     {
-        return adr < MemSize
+        return adr < MEM_SIZE
             ? adr
             : throw new InvalidMemoryException(adr);
     }

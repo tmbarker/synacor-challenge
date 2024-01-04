@@ -7,8 +7,8 @@ public partial class Vm
     private class State
     {
         public ushort Ip { get; set; }
-        public ushort[] Memory { get; } = new ushort[MemSize];
-        public ushort[] Registers { get; } = new ushort[NumReg];
+        public ushort[] Memory { get; } = new ushort[MEM_SIZE];
+        public ushort[] Registers { get; } = new ushort[NUM_REG];
         public Stack<ushort> Stack { get; } = new();
         public Queue<char> InputBuffer { get; } = new();
         public Queue<char> OutputBuffer { get; } = new();
@@ -61,9 +61,6 @@ public partial class Vm
             {
                 writer.Write(value);
             }
-
-            writer.Dispose();
-            stream.Dispose();
         }
         
         public static State Deserialize(string path)
@@ -104,9 +101,6 @@ public partial class Vm
             {
                 state.OutputBuffer.Enqueue(item: reader.ReadChar());
             }
-
-            reader.Dispose();
-            stream.Dispose();
 
             return state;
         }
