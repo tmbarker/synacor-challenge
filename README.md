@@ -194,3 +194,103 @@ You wake up on a sandy beach with a slight headache.  The last thing you remembe
 
 It begins to rain.  The message washes away.
 ```
+
+## Code #8: A Tropical Heist
+After being teleported to a tropical beach some simple exploration lead to a journal which succinctly described the final puzzle to be solved. A four-by-four array of rooms separated an "Orb", and a "Vault". The rooms were setup like a checkerboard, with each either containing an arithmetic operation (`+`, `-`, or `*`) on one "parity", and the others containing a numeric literal. The goal was to pick up the orb in the first room and navigate to the vault such that the cumulative score of the path taken matched the value written on the vault door.
+
+![orbs_map](https://github.com/tmbarker/synacor-challenge/assets/50631648/9fb9809a-61b8-4397-8409-7875b267fd43)
+
+This was a path-finding problem, so the first thing I did was whip up some utilities to make solving it easier:
+```
+public readonly record struct State(Vector2D Pos, int Weight);
+public readonly record struct Map(Dictionary<Vector2D, int> Literals, Dictionary<Vector2D, string> Operators);
+
+public readonly record struct Vector2D(int X, int Y)
+{
+    public static readonly Vector2D Zero  = new(X:  0, Y:  0);
+    public static readonly Vector2D Up    = new(X:  0, Y:  1);
+    public static readonly Vector2D Down  = new(X:  0, Y: -1);
+    public static readonly Vector2D Left  = new(X: -1, Y:  0);
+    public static readonly Vector2D Right = new(X:  1, Y:  0);
+    
+    public static IEnumerable<Vector2D> Dirs { get; } = Zero.GetAdjacentSet();
+    
+    public static Vector2D operator +(Vector2D a, Vector2D b)
+    {
+        return new Vector2D(X: a.X + b.X, Y: a.Y + b.Y);
+    }
+
+    private IEnumerable<Vector2D> GetAdjacentSet()
+    {
+        return [this + Up, this + Down, this + Left, this + Right];
+    }
+}
+```
+
+Next, I implemented a standard queue based Breadth First Search, iterating two spatial steps at a time, where the first step was into an operator room, and the second was into a numeric literal room. The core of my BFS looked like this:
+```
+foreach (var step1 in Vector2D.Dirs)
+foreach (var step2 in Vector2D.Dirs)
+{
+    var operatorPos = state.Pos + step1;
+    var literalPos  = operatorPos + step2;
+
+    // Some edge cases here removed for brevity
+
+    var adjacent = new State(Pos: literalPos, Weight: map.Operators[operatorPos] switch
+    {
+        "+" => state.Weight + map.Literals[literalPos],
+        "-" => state.Weight - map.Literals[literalPos],
+        "*" => state.Weight * map.Literals[literalPos]
+    });
+    
+    if (visited.Add(adjacent))
+    {
+        queue.Enqueue(adjacent);
+        paths[adjacent] = BuildPath(paths[state], step1, step2);
+    }
+}
+```
+
+Time to let my pathfinding code navigate for me:
+```
+Synacor Shell started.
+- Type 'help' for cmd listing
+- Type 'quit' to quit
+- Commands prepended with '--' are passed thru to the VM instance input buffer
+
+load C:\...\orb.syn  
+VM state loaded from C:\...\orb.syn
+solve-orb
+
+[Automated pathfinding output removed]
+
+== Vault Door ==
+You stand before the door to the vault; it has a large '30' carved into it.  Affixed to the wall near the door, there is a running hourglass which never seems to run out of sand.
+
+The floor of this room is a large mosaic depicting the number '1'.
+
+What do you do?
+--vault
+
+== Vault ==
+This vault contains incredible riches!  Piles of gold and platinum coins surround you, and the walls are adorned with topazes, rubies, sapphires, emeralds, opals, dilithium crystals, elerium-115, and unobtainium.
+
+Things of interest here:
+- mirror
+
+What do you do?
+--take mirror
+
+Taken.
+
+What do you do?
+--use mirror
+
+You gaze into the mirror, and you see yourself gazing back.  But wait!  It looks like someone wrote on your face while you were unconscious on the beach!  Through the mirror, you see "iW8UwOHpH8op" scrawled in charcoal on your forehead.
+
+Congratulations; you have reached the end of the challenge!
+```
+
+## Summary
+This was a really fun challenge, even though I'm very late to the party I'm happy to have solved it. In my opinion code 7 was by far the most difficult part of the challenge; even though I've been doing more and more disassembly problems they do not come easy to me. Thanks to Eric Wastl for issuing the challenge! For anyone reading this feel free to reach out if you have any questions about this repository.
