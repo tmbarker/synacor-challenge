@@ -164,6 +164,13 @@ public class Shell
             LogError(error: $"Unable to parse IP [{arg}]");
         }
     }
+
+    private void SolveOrbPuzzle()
+    {
+        _context.Vm.BufferCommands(OrbPuzzle.Solve());
+        _context.Vm.Run();
+        _context.Vm.PrintOutputBuffer();
+    }
     
     private static bool ParseInput(string input, out string cmd, out string arg)
     {
@@ -270,6 +277,11 @@ public class Shell
             syntax: "solve-teleporter",
             desc: "solve the teleporter puzzle and print the solution",
             handler: _ => LogInfo(info: TeleporterPuzzle.Solve()));
+        yield return new Command(
+            name: "solve-orb",
+            syntax: "solve-orb",
+            desc: "solve the orb puzzle by automatically navigating the current VM instance",
+            handler: _ => SolveOrbPuzzle());
         yield return new Command(
             name: "dsm",
             syntax: "dsm [path]",

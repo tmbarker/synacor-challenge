@@ -3,6 +3,11 @@ using System.Runtime.Versioning;
 
 namespace Synacor.Utilities;
 
+/// <summary>
+/// A utility class for solving the "Teleporter Puzzle", which entails determining the value which should
+/// be written to the eighth register before disabling the confirmation mechanism and using the teleporter
+/// again
+/// </summary>
 public static class TeleporterPuzzle
 {
     private const int  RECURSIVE_STACK_REQ = 20 * 1024 * 1024;
@@ -41,8 +46,7 @@ public static class TeleporterPuzzle
     /// <summary>
     /// This method was written by analyzing the challenge binary disassembly. The
     /// "Confirmation mechanism" for my binary began at IP 6049, and is a slightly
-    /// modified version of the 2-ary Ackermann function, which is known for it's
-    /// explosively rapid growth.
+    /// modified version of the 2-ary Ackermann function.
     /// </summary>
     private static uint Fn6049(uint x, uint m, uint n, Dictionary<(uint, uint), uint> memo)
     {

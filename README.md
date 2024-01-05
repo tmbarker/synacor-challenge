@@ -116,24 +116,20 @@ You activate the teleporter!  As you spiral through time and space, you think yo
 
 ## Code #7: Teleportation, Disassembly, and a Man Named Wilhelm Ackermann
 After the previous activation of the teleporter I found myself at Synacor HQ. A nearby book contained a lengthy passage about teleportation, and it was clear what I had to do to acquire my next code:
-1. The teleporter will transport you to one of two locations when you use it, based on the value in register 8 (index 7)
+1. The teleporter will transport you to one of two locations when you use it, based on the value in the eighth register
 2. If the value in the eighth register is zero, you are transported to Synacor HQ
 3. If the value in the eighth register is non-zero, it is first verified by a "long running confirmation mechanism", and if valid you are transported to a different (and unknown) location
 4. The confirmation mechanism will take "A billion years" to execute naively, so it must be reverse engineered and optimized
 
 The first thing I did was disassemble the challenge binary to a text file. Luckily, there are only a few usages of register 8 in the challenge binary. It became clear that the confirmation mechanism was invoked as follows, with the block of code at IP 6049 being the confirmation mechanism itself:
 ```
-5500:  noop
-5501:  noop
-5502:  noop
-5503:  noop
-5504:  noop
 5505:   set  reg[0]       4
 5508:   set  reg[1]       1
 5511:  call    6049
+5513:    eq  reg[1]  reg[0]       6
 ```
 
-Here is the "raw assembly" of "Function 6049":
+Here is the "raw assembly" of "function 6049":
 ```
 6049:    jt  reg[0]    6057
 6052:   add  reg[0]  reg[1]       1
@@ -155,12 +151,11 @@ Here is the "raw assembly" of "Function 6049":
 
 This chunk of code is only 16 lines long, but it took me an extremely long time to make sense of it. One important piece is the following:
 ```
-6060:   add  reg[0]  reg[0]   32767
-6072:   add  reg[1]  reg[1]   32767
+60XX:   add  reg[X]  reg[X]   32767
 ```
-Because all arithmetic in the Synacor VM is modulo 32768, these lines implement simple subtraction of 1, or equivalently a decrement operation.
+Because all arithmetic in the Synacor VM is modulo `32768`, these lines implement simple subtraction of `1`, or equivalently a decrement operation.
 
-One spoiler I had going into this challenge was that "Ackermann" was involved in some way. I previously had no idea what "Ackermann" was, but I learned that he was a computer scientist, given name Wilhelm, whose work on total computable functions famously yielded the "Ackermann Function". The Ackermann Function has many forms, but all of them characteristically having explosive growth in value.
+One spoiler I had going into this challenge was that "Ackermann" was involved in some way. I previously had no idea what "Ackermann" was, but I learned that he was a computer scientist, given name Wilhelm, whose work on total computable functions famously yielded the "Ackermann Function". The Ackermann Function has many forms, but all of them characteristically exhibit explosive growth in value.
 
 It turns out that function 6049 is a slightly modified version of the 2-ary Ackermann function. Translated to C#, it looks like this:
 ```
@@ -182,7 +177,7 @@ private static uint Fn6049(uint x, uint m, uint n, Dictionary<(uint, uint), uint
 
 In the above snippet `Inc` and `Dec` are simple increment and decrement operators that respect the system wide modulo constraint, and `x` is the value in the eighth register.
 
-The confirmation mechanism is validating that after function 6049 is invoked that register 0 contains the value 6. This means I need to find the value of `x` (register 8) that makes function 6049 return 6. I found this value by linearly checking every value between 1 and the system modulus, and found it to be `25734`. One hiccup was due to the recursion depth, even with memoization, I had to run this search in a new thread with a large stack size limit to avoid stack overflow.
+The confirmation mechanism is validating that after function 6049 is invoked that the first register contains the value `6`. This means I need to find the value of `x` (register 8) that makes function 6049 return `6`. I found this value by linearly checking every value between `1` and the system modulus, and found it to be `25734`. One hiccup was due to the recursion depth, even with memoization, I had to run this search in a new thread with a large stack size limit to avoid stack overflow.
 
 Putting it all together, I was able to acquire my 7th code:
 ```

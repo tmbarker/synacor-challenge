@@ -7,14 +7,14 @@ namespace Synacor.Utilities;
 public static class CoinPuzzle
 {
     private readonly record struct Coin(string Name, int Value);
-    private static readonly List<Coin> Coins = new()
-    {
+    private static readonly List<Coin> Coins =
+    [
         new Coin(Name: "red",      Value: 2),
         new Coin(Name: "corroded", Value: 3),
         new Coin(Name: "shiny",    Value: 5),
         new Coin(Name: "concave",  Value: 7),
         new Coin(Name: "blue",     Value: 9)
-    };
+    ];
     
     public static string Solve()
     {
