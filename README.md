@@ -158,7 +158,7 @@ Because all arithmetic in the Synacor VM is modulo `32768`, these lines implemen
 One spoiler I had going into this challenge was that "Ackermann" was involved in some way. I previously had no idea what "Ackermann" was, but I learned that he was a computer scientist, given name Wilhelm, whose work on total computable functions famously yielded the "Ackermann Function". The Ackermann Function has many forms, but all of them characteristically exhibit explosive growth in value.
 
 It turns out that function 6049 is a slightly modified version of the 2-ary Ackermann function. Translated to C#, it looks like this:
-```
+```cs
 private static uint Fn6049(uint x, uint m, uint n, Dictionary<(uint, uint), uint> memo)
 {
     if (!memo.ContainsKey((m, n)))
@@ -201,8 +201,9 @@ After being teleported to a tropical beach some simple exploration lead to a jou
 ![orbs_map](https://github.com/tmbarker/synacor-challenge/assets/50631648/9fb9809a-61b8-4397-8409-7875b267fd43)
 
 This was a path-finding problem, so the first thing I did was whip up some utilities to make solving it easier:
-```
+```cs
 public readonly record struct State(Vector2D Pos, int Weight);
+
 public readonly record struct Map(Dictionary<Vector2D, int> Literals, Dictionary<Vector2D, string> Operators);
 
 public readonly record struct Vector2D(int X, int Y)
@@ -228,7 +229,7 @@ public readonly record struct Vector2D(int X, int Y)
 ```
 
 Next, I implemented a standard queue based Breadth First Search, iterating two spatial steps at a time, where the first step was into an operator room, and the second was into a numeric literal room. The core of my BFS looked like this:
-```
+```cs
 foreach (var step1 in Vector2D.Dirs)
 foreach (var step2 in Vector2D.Dirs)
 {
@@ -293,4 +294,6 @@ Congratulations; you have reached the end of the challenge!
 ```
 
 ## Summary
-This was a really fun challenge, even though I'm very late to the party I'm happy to have solved it. In my opinion code 7 was by far the most difficult part of the challenge; even though I've been doing more and more disassembly problems they do not come easy to me. Thanks to Eric Wastl for issuing the challenge! For anyone reading this feel free to reach out if you have any questions about this repository.
+This was a really fun challenge, even though I'm very late to the party I'm happy to have solved it. In my opinion code 7 was by far the most difficult part of the challenge; even though I've been doing more and more disassembly problems they do not come easy to me. 
+
+Thanks to Eric Wastl for issuing the challenge! For anyone reading this feel free to reach out if you have any questions about this repository.
