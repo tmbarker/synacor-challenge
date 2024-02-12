@@ -27,7 +27,7 @@ public static class OrbPuzzle
     {
         var map = BuildMap(grid: Grid);
         var startPos = new Vector2D(X: 0, Y: 0);
-        var endPos   = new Vector2D(X: 3, Y: 3);
+        var endPos   = new Vector2D(X: Grid.GetUpperBound(dimension: 0), Y: Grid.GetUpperBound(dimension: 1));
         var startState = new State(Pos: startPos, Weight: map.Literals[startPos]);
         var endState   = new State(Pos: endPos,   Weight: TargetWeight);
         
@@ -67,10 +67,10 @@ public static class OrbPuzzle
                     "+" => state.Weight + map.Literals[literalPos],
                     "-" => state.Weight - map.Literals[literalPos],
                     "*" => state.Weight * map.Literals[literalPos],
-                    _ => throw new ArgumentOutOfRangeException()
+                    _ => throw new InvalidOperationException(message: $"Invalid operation [{map.Operators[operatorPos]}]")
                 });
                 
-                if (visited.Add(adjacent))
+                if (adjacent.Weight > 0 && visited.Add(adjacent))
                 {
                     queue.Enqueue(adjacent);
                     paths[adjacent] = BuildPath(paths[state], step1, step2);
@@ -116,6 +116,7 @@ public static class OrbPuzzle
 }
 
 public readonly record struct State(Vector2D Pos, int Weight);
+
 public readonly record struct Map(Dictionary<Vector2D, int> Literals, Dictionary<Vector2D, string> Operators);
 
 public readonly record struct Vector2D(int X, int Y)
