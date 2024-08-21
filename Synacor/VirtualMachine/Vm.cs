@@ -5,10 +5,12 @@ namespace Synacor.VirtualMachine;
 /// </summary>
 public partial class Vm
 {
+    // ReSharper disable InconsistentNaming
     private const ushort MEM_SIZE = 32768;
     private const ushort NUM_REG = 8;
     private const ushort MODULUS = 32768;
     private const ushort BIT_MASK_15 = 32767;
+    // ReSharper restore InconsistentNaming
     
     public const ushort MIN_REG = MEM_SIZE;
     public const ushort MAX_REG = MIN_REG + NUM_REG - 1;

@@ -1,4 +1,3 @@
-using System.Runtime.Versioning;
 using System.Text.RegularExpressions;
 using Synacor.Utilities;
 using Synacor.VirtualMachine;
@@ -8,7 +7,6 @@ namespace Synacor.Cli;
 /// <summary>
 /// A shell for working with Synacor <see cref="Vm"/> instances
 /// </summary>
-[SupportedOSPlatform("windows")]
 public class Shell
 {
     private const string StartMessage = $"{nameof(Synacor)} {nameof(Shell)} started.";
@@ -167,9 +165,14 @@ public class Shell
 
     private void SolveOrbPuzzle()
     {
-        _context.Vm.BufferCommands(OrbPuzzle.Solve());
-        _context.Vm.Run();
-        _context.Vm.PrintOutputBuffer();
+        LogData("[Auto-navigating]");
+        foreach (var command in OrbPuzzle.Solve())
+        {
+            LogInfo($"{PassThruPrefix}{command}");
+            _context.Vm.BufferCommand(command);
+            _context.Vm.Run();
+            _context.Vm.PrintOutputBuffer();   
+        }
     }
     
     private static bool ParseInput(string input, out string cmd, out string arg)
@@ -250,12 +253,12 @@ public class Shell
         yield return new Command(
             name: "set-breakpoint",
             syntax: "set-breakpoint [address]",
-            desc: "Set a breakpoint at the specified IP address",
+            desc: "Set a breakpoint at the specified instruction address",
             handler: SetBreakpoint);
         yield return new Command(
             name: "clear-breakpoint",
             syntax: "clear-breakpoint [address]",
-            desc: "Clear any breakpoint from the specified IP address",
+            desc: "Clear any breakpoint from the specified instruction address",
             handler: ClearBreakpoint);
         yield return new Command(
             name: "get-state",
@@ -280,7 +283,8 @@ public class Shell
         yield return new Command(
             name: "solve-orb",
             syntax: "solve-orb",
-            desc: "solve the orb puzzle by automatically navigating the current VM instance",
+            desc: "solve the orb puzzle by automatically navigating the current VM instance, run this command with the " +
+                  "orb in your inventory, from the first room in the maze",
             handler: _ => SolveOrbPuzzle());
         yield return new Command(
             name: "dsm",

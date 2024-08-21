@@ -196,7 +196,7 @@ It begins to rain.  The message washes away.
 ```
 
 ## Code #8: A Tropical Heist
-After being teleported to a tropical beach some simple exploration lead to a journal which succinctly described the final puzzle to be solved. A four-by-four array of rooms separated an "Orb", and a "Vault". The rooms were setup like a checkerboard, with each either containing an arithmetic operation (`+`, `-`, or `*`) on one "parity", and the others containing a numeric literal. The goal was to pick up the orb in the first room and navigate to the vault such that the cumulative score of the path taken matched the value written on the vault door.
+After being teleported to a tropical beach some simple exploration lead to a journal which succinctly described the final puzzle to be solved. A four-by-four array of rooms separated an "Orb", and a "Vault". The rooms were set up like a checkerboard, with each "square" of one parity containing an arithmetic operation (`+`, `-`, or `*`), and each of the other parity containing a numeric literal. The goal was to pick up the orb in the first room and navigate to the vault such that the cumulative score of the path taken matched the value written on the vault door.
 
 ![orbs_map](https://github.com/tmbarker/synacor-challenge/assets/50631648/9fb9809a-61b8-4397-8409-7875b267fd43)
 

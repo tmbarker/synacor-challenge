@@ -70,7 +70,7 @@ public static class OrbPuzzle
                     _ => throw new InvalidOperationException(message: $"Invalid operation [{map.Operators[operatorPos]}]")
                 });
                 
-                if (adjacent.Weight > 0 && visited.Add(adjacent))
+                if (adjacent.Weight >= 0 && visited.Add(adjacent))
                 {
                     queue.Enqueue(adjacent);
                     paths[adjacent] = BuildPath(paths[state], step1, step2);

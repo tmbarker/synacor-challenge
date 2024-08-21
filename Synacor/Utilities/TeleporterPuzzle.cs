@@ -1,5 +1,4 @@
 using System.Runtime.CompilerServices;
-using System.Runtime.Versioning;
 
 namespace Synacor.Utilities;
 
@@ -10,21 +9,20 @@ namespace Synacor.Utilities;
 /// </summary>
 public static class TeleporterPuzzle
 {
+    // ReSharper disable InconsistentNaming
     private const int  RECURSIVE_STACK_REQ = 20 * 1024 * 1024;
     private const uint UINT_1 = 1u;
     private const uint UINT_32767 = 32767u;
     private const uint UINT_MODULUS = 32768u;
     private const uint UINT_TARGET = 6u;
+    // ReSharper restore InconsistentNaming
     
-    [SupportedOSPlatform("windows")]
     public static string Solve()
     {
         var result = 0u;
         var thread = new Thread(Search, maxStackSize: RECURSIVE_STACK_REQ);
 
         Console.WriteLine("Solving teleporter puzzle, this will take a while...");
-        
-        thread.SetApartmentState(ApartmentState.STA);
         thread.Start();
         thread.Join();
         
