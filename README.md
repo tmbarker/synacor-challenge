@@ -296,6 +296,16 @@ You gaze into the mirror, and you see yourself gazing back.  But wait!  It looks
 Congratulations; you have reached the end of the challenge!
 ```
 
+At this point, I really did think that I had completed the challenge, and the above VM output marked the end of this README for many months. Recently, I was surprised to get notified by GitHub about an [issue](https://github.com/tmbarker/synacor-challenge/issues/1) in this repository. 
+
+Another Synacor Challenge [participant](https://github.com/SansForSSBU/synacor_challenge_playthrough) was working through the puzzles, and was using yet-another [repo](https://github.com/Aneurysm9/vm_challenge) to validate the codes that they discovered. This latter repo contained MD5 hashes of the eight codes, and this participant noticed that their eighth code did not generate the same MD5 hash. They seemingly found my repo on GitHub, which saliently had the same ostensibly correct eighth code, which also generated the apparently wrong MD5 hash. 
+
+Because the validation website is no longer available, I had never been able to validate my codes. After double-checking my code, and manually verifying the solution, I was confident that the solution was correct. 
+
+However, there was a final sting in the tail to the Synacor Challenge. Note that the final code is seen through a mirror. While my solution to the orb/maze puzzle itself was "sound", I had failed to account for the reflection transform caused by the mirror. The code `iW8UwOHpH8op` needed to be horizontally reflected into `qo8HqHOwU8Wi`. 
+
+I'm quite happy that this other participant reached out, as this was a fitting and satisfying conclusion to the challenge, which I had been blissfully ignorant of.
+
 ## Summary
 This was a really fun challenge, even though I'm very late to the party I'm happy to have solved it. In my opinion code 7 was by far the most difficult part of the challenge; even though I've been doing more and more disassembly problems they do not come easy to me. 
 
