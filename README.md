@@ -252,8 +252,11 @@ foreach (var step2 in Vector2D.Dirs)
     }
 }
 ```
+Running my code yielded this path:
 
-Time to let my pathfinding code navigate for me:
+![synacor_orb_solution_annotated](https://github.com/user-attachments/assets/01f3e21c-381e-4abb-adcb-61d23f6715ec)
+
+The only thing left to do was to let my pathfinding code navigate for me, and then enter the vault:
 ```
 Synacor Shell started.
 - Type 'help' for cmd listing
